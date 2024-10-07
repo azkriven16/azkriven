@@ -52,25 +52,26 @@ export const siteConfig = {
     socials: [
         {
             text: "Facebook",
-            href: "/",
+            href: "https://www.facebook.com/euger.bonete.9",
             Icon: FacebookIcon,
         },
         {
             text: "Github",
-            href: "/",
+            href: "https://github.com/azkriven16",
             Icon: GithubIcon,
         },
         {
             text: "Email",
-            href: "/",
+            href: "https://mail.google.com/mail/?view=cm&fs=1&to=your-azkriven16@gmail.com",
             Icon: MailIcon,
         },
         {
             text: "LinkedIn",
-            href: "/",
+            href: "https://www.linkedin.com/in/euger-bonete/",
             Icon: LinkedinIcon,
         },
     ],
+
     certificates: [
         {
             text: "HTML/CSS",

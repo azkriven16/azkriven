@@ -8,6 +8,7 @@ import Link from "next/link";
 import { ModeToggle } from "./mode-toggle";
 import { Button, buttonVariants } from "./ui/button";
 import { useState } from "react";
+import { BackgroundGradient } from "./ui/background-gradient";
 
 export default function MobileNav() {
     const [open, setOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function MobileNav() {
                 </DrawerTrigger>
                 <DrawerContent>
                     <nav className="mt-20">
-                        <ul className="flex flex-col justify-center gap-5 w-full">
+                        <ul className="flex flex-col justify-center gap-5 w-full uppercase mb-10">
                             {siteConfig.nav.map(({ href, text }) => (
                                 <a href={href} onClick={() => setOpen(false)}>
                                     <li
@@ -39,7 +40,7 @@ export default function MobileNav() {
                             ))}
                         </ul>
 
-                        <ul className="flex gap-2 justify-center my-10">
+                        <BackgroundGradient className="flex gap-2 justify-center my-5 list-none rounded-b-none">
                             {siteConfig.socials.map((social) => (
                                 <li key={social.text}>
                                     <Link
@@ -55,7 +56,7 @@ export default function MobileNav() {
                                 </li>
                             ))}
                             <ModeToggle />
-                        </ul>
+                        </BackgroundGradient>
                     </nav>
                 </DrawerContent>
             </Drawer>
