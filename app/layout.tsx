@@ -7,6 +7,9 @@ import Shell from "../components/shell";
 import { siteConfig } from "../config/site";
 
 import "./globals.css";
+import MobileNav from "@/components/mobile-nav";
+import DesktopNav from "@/components/desktop-nav";
+import { Pattern } from "@/components/ui/pattern";
 
 const fontSans = FontSans({
     subsets: ["latin"],
@@ -45,7 +48,10 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <Shell className="grid lg:grid-cols-2 gap-10">
+                        <DesktopNav />
+                        <MobileNav />
                         <Sidebar />
+                        <Pattern variant="checkered" />
                         {children}
                     </Shell>
                 </ThemeProvider>
