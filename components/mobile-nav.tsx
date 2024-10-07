@@ -13,7 +13,7 @@ import { BackgroundGradient } from "./ui/background-gradient";
 export default function MobileNav() {
     const [open, setOpen] = useState(false);
     return (
-        <div className="fixed right-4 top-4 lg:hidden">
+        <div className="fixed right-4 top-4 lg:hidden z-50">
             <Drawer open={open} onOpenChange={setOpen}>
                 <DrawerTrigger asChild>
                     <Button className="h-12 w-12" size="icon" variant="ghost">

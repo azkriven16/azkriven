@@ -9,7 +9,7 @@ export default function Sidebar() {
         <div className="w-full h-full">
             <div className="lg:fixed">
                 <h1 className="text-4xl font-black tracking-wide sm:text-5xl pb-1">
-                    {siteConfig.author}
+                    <a href="/">{siteConfig.author}</a>
                 </h1>
                 <WordRotate
                     className="mt-3 text-lg font-medium tracking-tight sm:text-xl"
