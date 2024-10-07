@@ -15,9 +15,9 @@ export default function Sidebar() {
                     className="mt-3 text-lg font-medium tracking-tight sm:text-xl"
                     words={[
                         "is a cool web developer",
-                        "a manga/manhwa/novel reader",
-                        "also an anime fan and",
-                        "a man of culture ( ͡° ͜ʖ ͡°)",
+                        "is a manga/manhwa/novel reader",
+                        "is also an anime fan",
+                        "is a man of culture ( ͡° ͜ʖ ͡°)",
                     ]}
                 />
                 <p className="mt-4 max-w-xs leading-normal text-muted-foreground flex gap-2">
