@@ -1,4 +1,4 @@
-import { siteConfig, SOCIALS } from "@/config/site";
+import { SOCIALS } from "@/config/site";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import { Button, buttonVariants } from "./ui/button";
