@@ -1,9 +1,6 @@
 import { SOCIALS } from "@/config/site";
-import { ChevronRightIcon } from "lucide-react";
-import Link from "next/link";
-import { Button, buttonVariants } from "./ui/button";
-import { Card, CardContent, CardDescription, CardTitle } from "./ui/card";
 import Section from "./section";
+import { Button } from "./ui/button";
 
 export default function Footer() {
     return (

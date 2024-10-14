@@ -20,7 +20,7 @@ export function ModeToggle() {
         <Button
             onClick={handleThemeSwitch}
             size="icon"
-            variant="ghost"
+            variant="outline"
             className="min-w-[35px]"
         >
             <Sun

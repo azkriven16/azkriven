@@ -9,20 +9,25 @@ import { Card } from "@/components/ui/card";
 import { PROJECTS } from "@/config/site";
 import { ArrowRightIcon, ChevronRightIcon } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+    const router = useRouter();
     return (
         <div>
             <Section className="md:mt-32">
                 <h1 className="text-4xl md:text-6xl font-pixel font-black">
                     Web developer <br /> and builder
                 </h1>
-                <p className="text-lg font-pixel">
-                    I'm Selene, a design engineer at FLY, where I craft
-                    intuitive <br /> user experiences. After hours, I build my
-                    own projects.
+                <p className="text-lg font-pixel md:w-1/2">
+                    I'm Euger, a software engineer at{" "}
+                    <span className="text-primary">Rocketshyft</span> ,
+                    dedicated to crafting intuitive software experiences. When
+                    I'm not coding at work, I enjoy developing my own projects
+                    to explore new ideas and technologies.
                 </p>
                 <Button
+                    onClick={() => router.push("/about")}
                     variant="expandIcon"
                     Icon={ChevronRightIcon}
                     iconPlacement="right"
