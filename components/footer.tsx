@@ -1,25 +1,21 @@
-import { siteConfig } from "@/config/site";
+import { siteConfig, SOCIALS } from "@/config/site";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "./ui/card";
+import Section from "./section";
 
 export default function Footer() {
     return (
-        <section className="space-y-5 text-muted-foreground" id="Footer">
-            <p className="mt-4 max-w-xs leading-normal text-muted-foreground flex gap-2">
-                © Euger Bonete 2023. All rights reserved.
-            </p>
-            <p className="mt-4 max-w-xs leading-normal text-muted-foreground flex gap-2">
-                Built with 💖 by{" "}
-                <a
-                    href="https://github.com/azkriven16"
-                    target="_blank"
-                    className="mx-1 hover:underline text-foreground z-50"
-                >
-                    Euger Bonete
-                </a>
-            </p>
-        </section>
+        <Section className="flex flex-col-reverse md:flex-row items-center justify-between mb-0">
+            <p>© 2024 / Selene Yu / Build your portfolio with Once UI</p>
+            <div className="pb-5">
+                {SOCIALS.map((item) => (
+                    <Button key={item.text} size="icon" variant="ghost">
+                        <item.Icon className="h-4 w-4" />
+                    </Button>
+                ))}
+            </div>
+        </Section>
     );
 }

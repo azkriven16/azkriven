@@ -1,30 +1,49 @@
-import Sidebar from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans, VT323 } from "next/font/google";
-import Shell from "../components/shell";
-import { siteConfig } from "../config/site";
+import { Inter as FontSans, Source_Code_Pro } from "next/font/google";
 
-import "./globals.css";
-import MobileNav from "@/components/mobile-nav";
-import DesktopNav from "@/components/desktop-nav";
 import { Pattern } from "@/components/ui/pattern";
+import { baseURL, SITE_CONFIG } from "@/config/site";
+
+import Footer from "@/components/footer";
+import Nav from "@/components/nav";
+import "./globals.css";
 
 const fontSans = FontSans({
     subsets: ["latin"],
     variable: "--font-sans",
 });
 
-const dotGothic = VT323({
+const code = Source_Code_Pro({
+    variable: "--font-code",
     subsets: ["latin"],
-    weight: "400",
-    variable: "--font-pixel",
+    display: "swap",
 });
 
 export const metadata: Metadata = {
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: `${SITE_CONFIG.firstName}'s Portfolio`,
+    description: SITE_CONFIG.description,
+    metadataBase: new URL(`https://${baseURL}`),
+    openGraph: {
+        title: `${SITE_CONFIG.firstName}'s Portfolio`,
+        description: "Portfolio website showcasing my work.",
+        url: baseURL,
+        siteName: `${SITE_CONFIG.firstName}'s Portfolio`,
+        locale: "en_US",
+        type: "website",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
 };
 
 export default function RootLayout({
@@ -35,11 +54,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={cn(
-                    "min-h-screen font-sans antialiased animate-background ",
-                    fontSans.variable,
-                    dotGothic.variable
-                )}
+                className={cn("antialiased", fontSans.variable, code.variable)}
             >
                 <ThemeProvider
                     attribute="class"
@@ -47,13 +62,10 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <Shell className="grid lg:grid-cols-2 gap-10">
-                        <DesktopNav />
-                        <MobileNav />
-                        <Sidebar />
-                        <Pattern variant="checkered" />
-                        {children}
-                    </Shell>
+                    <Nav />
+                    <Pattern variant="checkered" />
+                    <main className="my-20 container">{children}</main>
+                    <Footer />
                 </ThemeProvider>
             </body>
         </html>

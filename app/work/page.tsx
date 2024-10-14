@@ -1,44 +1,27 @@
 "use client";
 
 import Section from "@/components/section";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import AvatarCircles from "@/components/ui/avatar-circles";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { PROJECTS } from "@/config/site";
-import { ArrowRightIcon, ChevronRightIcon } from "lucide-react";
+import { ChevronRightIcon } from "lucide-react";
 import Image from "next/image";
+import React from "react";
 
-export default function Page() {
+export default function Work() {
     return (
         <div>
             <Section className="md:mt-32">
                 <h1 className="text-4xl md:text-6xl font-pixel font-black">
-                    Web developer <br /> and builder
+                    Selected Works
                 </h1>
-                <p className="text-lg font-pixel">
+                <p className="text-lg font-pixel text-muted-foreground">
                     I'm Selene, a design engineer at FLY, where I craft
                     intuitive <br /> user experiences. After hours, I build my
                     own projects.
                 </p>
-                <Button
-                    variant="expandIcon"
-                    Icon={ChevronRightIcon}
-                    iconPlacement="right"
-                    className="gap-2 rounded-full"
-                >
-                    <Avatar>
-                        <AvatarImage
-                            src="https://github.com/azkriven16.png"
-                            alt="@shadcn"
-                        />
-                        <AvatarFallback>EB</AvatarFallback>
-                    </Avatar>{" "}
-                    About Me
-                </Button>
             </Section>
-
             <Section className="grid gap-y-10 md:gap-y-20">
                 {PROJECTS.map((item) => (
                     <div key={item.title} className="space-y-5">
