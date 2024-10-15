@@ -104,21 +104,31 @@ export default function About() {
                     <h3 id="studies" className="text-4xl font-bold">
                         Studies
                     </h3>
+
                     <div>
                         <h4 className="text-xl font-semibold">
-                            Northern IloIlo State University
+                            Northern Iloilo State University
                         </h4>
                         <p className="text-muted-foreground">
-                            Studied software engineering.
+                            Bachelor’s in Information Technology
                         </p>
                     </div>
 
                     <div>
                         <h4 className="text-xl font-semibold">
-                            Northern IloIlo State University
+                            Iloilo King of Glory Christian Academy
                         </h4>
                         <p className="text-muted-foreground">
-                            Studied software engineering.
+                            High School Diploma
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 className="text-xl font-semibold">
+                            Carles Central School
+                        </h4>
+                        <p className="text-muted-foreground">
+                            Elementary Education
                         </p>
                     </div>
                 </div>

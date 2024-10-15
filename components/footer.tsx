@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 export default function Footer() {
     return (
-        <Section className="flex flex-col-reverse md:flex-row items-center justify-between mb-0 pb-20">
+        <Section className="flex flex-col-reverse md:flex-row items-center justify-between mb-0 pb-24 md:pb-10">
             <p>© 2024 / Selene Yu / Build your portfolio with Once UI</p>
             <div className="pb-5">
                 {SOCIALS.map((item) => (

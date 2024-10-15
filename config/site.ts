@@ -137,7 +137,7 @@ export const BLOG = [
         title: "Getting Started with Web Development",
         description:
             "we'll explore the basics to help you kickstart your web development adventure.",
-        date: "23rd June 2023",
+        date: "June 23, 2023",
         href: "https://what-the-blog.vercel.app/blogs/getting-started-with-web-development",
     },
 
@@ -145,7 +145,7 @@ export const BLOG = [
         title: "useClickOutside React Hook",
         description:
             "a powerful tool for handling these scenarios with elegance and efficiency.",
-        date: "29th Nov 2023",
+        date: "Nov 29, 2023",
         href: "https://what-the-blog.vercel.app/blogs/getting-started-with-web-development",
     },
 
@@ -153,7 +153,7 @@ export const BLOG = [
         title: "A Guide to Boosting Productivity in Coding",
         description:
             "tips to help you become more productive in your coding endeavors.",
-        date: "1st Dec 2023",
+        date: "Dec 1, 2023",
         href: "https://what-the-blog.vercel.app/blogs/getting-started-with-web-development",
     },
 ];

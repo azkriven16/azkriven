@@ -19,7 +19,7 @@ export default function Page() {
                 <h1 className="text-4xl md:text-6xl font-pixel font-black">
                     Web developer <br /> and builder
                 </h1>
-                <p className="text-lg font-pixel md:w-1/2">
+                <p className="text-lg font-pixel text-muted-foreground">
                     I'm Euger, a software engineer at{" "}
                     <span className="text-primary">Rocketshyft</span> ,
                     dedicated to crafting intuitive software experiences. When
@@ -31,7 +31,7 @@ export default function Page() {
                     variant="expandIcon"
                     Icon={ChevronRightIcon}
                     iconPlacement="right"
-                    className="gap-2 rounded-full"
+                    className="gap-2 rounded-full h-14 px-10"
                 >
                     <Avatar>
                         <AvatarImage
@@ -47,7 +47,7 @@ export default function Page() {
             <Section className="grid gap-y-10 md:gap-y-20">
                 {PROJECTS.map((item) => (
                     <div key={item.title} className="space-y-5">
-                        <BackgroundGradient>
+                        <div className="border-2 rounded-3xl">
                             <div className="bg-background overflow-hidden rounded-3xl relative aspect-video">
                                 <Image
                                     src={item.imgLight}
@@ -55,7 +55,7 @@ export default function Page() {
                                     fill
                                 />
                             </div>
-                        </BackgroundGradient>
+                        </div>
                         <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-10">
                             <h3 className="text-2xl md:text-3xl font-bold">
                                 {item.title}

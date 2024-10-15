@@ -17,11 +17,11 @@ export default function Work() {
                     Selected Works
                 </h1>
                 <p className="text-lg font-pixel text-muted-foreground">
-                    I'm Selene, a design engineer at FLY, where I craft
-                    intuitive <br /> user experiences. After hours, I build my
-                    own projects.
+                    A showcase of my projects, where I explore innovative ideas
+                    and cutting-edge technologies.
                 </p>
             </Section>
+
             <Section className="grid gap-y-10 md:gap-y-20">
                 {PROJECTS.map((item) => (
                     <div key={item.title} className="space-y-5">

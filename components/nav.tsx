@@ -6,6 +6,7 @@ import { Blocks, MapPin } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ModeToggle } from "./mode-toggle";
+import { BackgroundGradient } from "./ui/background-gradient";
 
 export default function Nav() {
     const path = usePathname();
@@ -20,7 +21,7 @@ export default function Nav() {
                 <Blocks className="h-4 w-4" /> {SITE_CONFIG.name}
             </div>
 
-            <nav className="flex justify-center gap-5 border w-fit px-2 py-2 rounded-xl bg-background">
+            <BackgroundGradient className="flex justify-center gap-5 border w-fit px-2 py-2 rounded-3xl bg-background">
                 {NAV_ITEMS.map((item) => (
                     <Link
                         className={cn(
@@ -33,7 +34,7 @@ export default function Nav() {
                         <span className="hidden md:inline">{item.text}</span>
                     </Link>
                 ))}
-            </nav>
+            </BackgroundGradient>
             <ModeToggle />
         </div>
     );
