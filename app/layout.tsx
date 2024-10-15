@@ -13,6 +13,7 @@ import "./globals.css";
 const fontSans = FontSans({
     subsets: ["latin"],
     variable: "--font-sans",
+    display: "swap",    
 });
 
 const code = Source_Code_Pro({

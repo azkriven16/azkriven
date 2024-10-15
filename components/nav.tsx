@@ -20,7 +20,7 @@ export default function Nav() {
                 <Blocks className="h-4 w-4" /> {SITE_CONFIG.name}
             </div>
 
-            <nav className="flex justify-center gap-5 border w-fit px-2 py-1 rounded-xl h-10 bg-background">
+            <nav className="flex justify-center gap-5 border w-fit px-2 py-2 rounded-xl h-10 bg-background">
                 {NAV_ITEMS.map((item) => (
                     <Link
                         className={cn(
@@ -29,7 +29,7 @@ export default function Nav() {
                         )}
                         href={item.href}
                     >
-                        <item.icon className="h-4 w-4" />
+                        <item.icon className="h-8 w-8 md:h-4 md:w-4" />
                         <span className="hidden md:inline">{item.text}</span>
                     </Link>
                 ))}
