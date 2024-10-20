@@ -7,7 +7,7 @@ export function About() {
             <div className="flex flex-col-reverse md:flex-row items-center justify-end gap-5">
                 <div className="flex flex-col space-y-5 leading-tight">
                     <h1 className="text-center md:text-left text-2xl md:text-4xl font-roboto font-black">
-                        👋 Hello there! I'm John
+                        👋 Hello there! I'm Euger
                     </h1>
                     <div className="flex justify-center md:justify-start items-center gap-2 font-semibold text-lg">
                         <IconMapPin />
@@ -18,9 +18,9 @@ export function About() {
                         and web apps that can impact millions of lives
                     </p>
                     <p>
-                        I'm a senior software engineer with 7 years of
-                        experience building scalable web apps that are
-                        performance optimized and good looking.
+                        I'm a software engineer and student building scalable
+                        web apps that are performance optimized and good
+                        looking.
                     </p>
                 </div>
 
