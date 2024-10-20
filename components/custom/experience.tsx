@@ -5,7 +5,9 @@ import React from "react";
 export const Experience = () => {
     return (
         <div className="space-y-5">
-            <h3 className="font-bold text-lg">Work Experience</h3>
+            <h3 className="font-semibold text-2xl">
+                Some of my tech related work
+            </h3>
             <ul className="space-y-10">
                 {EXP.map((item) => (
                     <li key={item.company}>

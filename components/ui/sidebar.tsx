@@ -172,6 +172,7 @@ export const SidebarLink = ({
     return (
         <Link
             href={link.href}
+            target={link.href.includes("https") ? "_blank" : "_self"}
             className={cn(
                 "flex items-center justify-start gap-2 group/sidebar p-2",
                 className,

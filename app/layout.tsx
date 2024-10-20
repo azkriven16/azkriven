@@ -6,8 +6,8 @@ import { Pattern } from "@/components/ui/pattern";
 import { baseURL, SITE_CONFIG } from "@/config/site";
 
 import { SidebarComponent } from "@/components/custom/sidebar";
-import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
+import "./globals.css";
 
 export const metadata: Metadata = {
     title: `${SITE_CONFIG.firstName}'s Portfolio`,

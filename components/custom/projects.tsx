@@ -4,7 +4,9 @@ import Image from "next/image";
 export const Projects = () => {
     return (
         <div className="space-y-5">
-            <h3 className="font-semibold text-lg">What I've been working on</h3>
+            <h3 className="font-semibold text-2xl">
+                What I've been working on
+            </h3>
 
             <ul className="space-y-5">
                 {PROJECTS.map((item) => (

@@ -1,15 +1,28 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface ShellProps {
+    key: string;
     className?: string;
     children: ReactNode;
 }
 
-export default function Section({ className, children }: ShellProps) {
+export default function Section({ className, children, key }: ShellProps) {
     return (
-        <section className={cn("max-w-4xl mx-auto space-y-5 my-10", className)}>
-            {children}
-        </section>
+        <AnimatePresence>
+            <motion.section
+                initial={{ opacity: 0, y: 50 }}
+                exit={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className={cn("", className)}
+                key={key}
+            >
+                {children}
+            </motion.section>
+        </AnimatePresence>
     );
 }

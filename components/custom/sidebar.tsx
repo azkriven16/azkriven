@@ -50,7 +50,7 @@ export function SidebarComponent({ children }: PropsWithChildren) {
     const socials = [
         {
             label: "Messenger",
-            href: "https://www.messenger.com/euger.bonete.9",
+            href: "https://www.facebook.com/euger.bonete.9",
             icon: (
                 <IconBrandMessenger className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),
