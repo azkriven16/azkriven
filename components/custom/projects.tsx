@@ -4,8 +4,8 @@ import Image from "next/image";
 export const Projects = () => {
     return (
         <div className="space-y-5">
-            <h3 className="font-semibold text-2xl">
-                What I've been working on
+            <h3 className="font-semibold text-xl">
+                What I've been working on my free time
             </h3>
 
             <ul className="space-y-5">

@@ -5,7 +5,7 @@ import React from "react";
 export const Experience = () => {
     return (
         <div className="space-y-5">
-            <h3 className="font-semibold text-2xl">
+            <h3 className="font-semibold text-xl">
                 Some of my tech related work
             </h3>
             <ul className="space-y-10">

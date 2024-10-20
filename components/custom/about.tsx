@@ -18,14 +18,19 @@ export function About() {
                         Iloilo, Philippines
                     </div>
                     <p>
-                        I'm a passionate full-stack developer dedicated to
-                        building impactful products and web applications that
-                        can touch millions of lives.
+                        I'm Euger Bonete, a dedicated software engineer and a
+                        fourth-year student. My passion for coding began during
+                        the 2020, where I embarked on a self-learning journey.
+                        Through perseverance and consistent practice. I've
+                        successfully transitioned my skills into professional
+                        roles.
                     </p>
                     <p>
-                        As a software engineer and student, I focus on creating
-                        scalable web apps that are both performance-optimized
-                        and visually appealing.
+                        Today, I'm proud to be working at my third company,
+                        where I'm continuously honing my abilities and
+                        contributing to innovative projects. My goal is to
+                        leverage my technical expertise to drive positive impact
+                        and contribute to the growth of the tech industry.
                     </p>
                     {path.includes("/about") && (
                         <div className="space-y-5 pt-10">
