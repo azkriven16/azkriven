@@ -15,6 +15,7 @@ import Link from "next/link";
 import { PropsWithChildren, useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "../ui/sidebar";
 import { ModeToggle } from "./mode-toggle";
+import { Footer } from "./footer";
 
 export function SidebarComponent({ children }: PropsWithChildren) {
     const links = [
@@ -91,7 +92,7 @@ export function SidebarComponent({ children }: PropsWithChildren) {
                     <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
                         <Logo />
                         <div className="mt-8 flex flex-col gap-2">
-                            <h4>Navigation</h4>
+                            <h4 className="text-sm">Navigation</h4>
                             {links.map((link, idx) => (
                                 <button
                                     key={idx}
@@ -102,7 +103,7 @@ export function SidebarComponent({ children }: PropsWithChildren) {
                             ))}
                         </div>
                         <div className="mt-8 flex flex-col gap-2">
-                            <h4>Socials</h4>
+                            <h4 className="text-sm">Socials</h4>
                             {socials.map((link, idx) => (
                                 <button
                                     key={idx}
@@ -116,7 +117,10 @@ export function SidebarComponent({ children }: PropsWithChildren) {
                     <ModeToggle />
                 </SidebarBody>
             </Sidebar>
-            <div className="flex flex-1 p-2 md:ml-[200px]">{children}</div>
+            <div className="flex flex-col flex-1 p-2 md:ml-[200px]">
+                {children}
+                <Footer />
+            </div>
         </div>
     );
 }

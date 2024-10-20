@@ -22,7 +22,7 @@ export function ModeToggle() {
     return (
         <div
             onClick={handleThemeSwitch}
-            className="cursor-pointer flex items-center gap-2"
+            className="cursor-pointer flex items-center gap-2 p-2"
         >
             <Sun
                 size={20}

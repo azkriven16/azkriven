@@ -1,12 +1,11 @@
+import { SidebarComponent } from "@/components/custom/sidebar";
 import { ThemeProvider } from "@/components/custom/theme-provider";
+import { Pattern } from "@/components/ui/pattern";
+import { Toaster } from "@/components/ui/sonner";
+import { baseURL, SITE_CONFIG } from "@/config/site";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
-import { Pattern } from "@/components/ui/pattern";
-import { baseURL, SITE_CONFIG } from "@/config/site";
-
-import { SidebarComponent } from "@/components/custom/sidebar";
-import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
