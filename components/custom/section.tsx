@@ -5,12 +5,11 @@ import { ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 interface ShellProps {
-    key: string;
     className?: string;
     children: ReactNode;
 }
 
-export default function Section({ className, children, key }: ShellProps) {
+export default function Section({ className, children }: ShellProps) {
     return (
         <AnimatePresence>
             <motion.section
@@ -19,7 +18,6 @@ export default function Section({ className, children, key }: ShellProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className={cn("", className)}
-                key={key}
             >
                 {children}
             </motion.section>

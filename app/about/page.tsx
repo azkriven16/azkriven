@@ -4,7 +4,7 @@ import React from "react";
 
 export default function AboutPage() {
     return (
-        <Section key="about">
+        <Section>
             <About />
         </Section>
     );

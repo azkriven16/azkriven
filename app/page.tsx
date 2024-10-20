@@ -6,7 +6,7 @@ import { TechStack } from "@/components/custom/stack";
 
 export default function Home() {
     return (
-        <Section key="home" className="flex flex-col space-y-20">
+        <Section className="flex flex-col space-y-20">
             <About />
             <Projects />
             <Experience />

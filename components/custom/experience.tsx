@@ -10,7 +10,7 @@ export const Experience = () => {
             </h3>
             <ul className="space-y-10">
                 {EXP.map((item) => (
-                    <li key={item.company}>
+                    <li key={item.company} className="space-y-2">
                         <Link
                             href={item.href || "#"}
                             className="font-bold hover:underline"
@@ -18,8 +18,8 @@ export const Experience = () => {
                         >
                             {item.company}
                         </Link>
-                        <p className="font-semibold">{item.role}</p>
-                        <p className="font-semibold text-sm">{item.date}</p>
+                        <p className="font-semibold text-sm">{item.role}</p>
+                        <p className="text-sm">{item.date}</p>
                         <p className="text-sm text-muted-foreground">
                             {item.desc}
                         </p>
