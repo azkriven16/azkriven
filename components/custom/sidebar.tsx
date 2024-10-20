@@ -116,7 +116,7 @@ export function SidebarComponent({ children }: PropsWithChildren) {
                     <ModeToggle />
                 </SidebarBody>
             </Sidebar>
-            <div className="flex flex-1 md:ml-[200px]">{children}</div>
+            <div className="flex flex-1 p-2 md:ml-[200px]">{children}</div>
         </div>
     );
 }

@@ -8,10 +8,13 @@ export const Projects = () => {
 
             <ul className="space-y-5">
                 {PROJECTS.map((item) => (
-                    <li key={item.href} className="flex gap-5">
+                    <li
+                        key={item.href}
+                        className="flex flex-col md:flex-row items-start gap-5"
+                    >
                         <div className="relative aspect-video h-32 rounded-md overflow-hidden">
                             <Image
-                                src={item.imgLight}
+                                src={item.imgDark}
                                 alt={`${item.title} Image`}
                                 fill
                             />
