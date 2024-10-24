@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={cn("antialiased font-poppins")}>
+            <body className={cn("antialiased font-poppins bg-secondary")}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
@@ -53,7 +53,7 @@ export default function RootLayout({
                         </main>
                     </SidebarComponent>
                     <Toaster />
-                    <Pattern variant="checkered" />
+                    {/* <Pattern variant="checkered" /> */}
                 </ThemeProvider>
             </body>
         </html>

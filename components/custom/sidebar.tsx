@@ -89,7 +89,7 @@ export function SidebarComponent({ children }: PropsWithChildren) {
         >
             <Sidebar open={open} setOpen={setOpen} animate={false}>
                 <SidebarBody className="justify-between gap-10 fixed">
-                    <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+                    <div className="flex flex-col flex-1 overflow-hidden">
                         <Logo />
                         <div className="mt-8 flex flex-col gap-2">
                             <h4 className="text-sm">Navigation</h4>
