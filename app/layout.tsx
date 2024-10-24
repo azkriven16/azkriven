@@ -48,7 +48,7 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <SidebarComponent>
-                        <main className="flex flex-1 p-2 md:p-10">
+                        <main className="flex flex-1 p-2 md:p-10 mt-20 md:mt-0">
                             {children}
                         </main>
                     </SidebarComponent>
