@@ -145,7 +145,7 @@ export const About = () => {
                                             delay: 0.45,
                                             duration: 0.2,
                                         }}
-                                        className="space-y-6 bg-white"
+                                        className="space-y-6"
                                     >
                                         <h3 className="font-semibold text-xl">
                                             Certifications
