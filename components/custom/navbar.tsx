@@ -2,7 +2,13 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { IconMenu2 } from "@tabler/icons-react";
+import {
+    IconMenu2,
+    IconBrandGithub,
+    IconBrandLinkedin,
+    IconBrandFacebook,
+    IconMail,
+} from "@tabler/icons-react";
 import { Drawer } from "@/components/ui/drawer";
 import { DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 
@@ -35,47 +41,85 @@ export const Navbar = () => {
                 <div className="md:hidden">
                     <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
                         <DrawerTrigger asChild>
-                            <Button variant="outline" size="icon">
-                                <IconMenu2 />
-                            </Button>
+                            <IconMenu2 className="cursor-pointer" />
                         </DrawerTrigger>
                         <DrawerContent>
-                            <div className="p-4 space-y-2">
-                                <Button
-                                    asChild
-                                    variant="ghost"
-                                    className="w-full"
-                                >
-                                    <Link href="/">Home</Link>
-                                </Button>
-                                <Button
-                                    asChild
-                                    variant="ghost"
-                                    className="w-full"
-                                >
-                                    <Link href="/about">About</Link>
-                                </Button>
-                                <Button
-                                    asChild
-                                    variant="ghost"
-                                    className="w-full"
-                                >
-                                    <Link href="/experience">Experience</Link>
-                                </Button>
-                                <Button
-                                    asChild
-                                    variant="ghost"
-                                    className="w-full"
-                                >
-                                    <Link href="/projects">Projects</Link>
-                                </Button>
-                                <Button
-                                    asChild
-                                    variant="ghost"
-                                    className="w-full"
-                                >
-                                    <Link href="/techstack">Tech Stack</Link>
-                                </Button>
+                            <div className="p-6 space-y-6">
+                                <div className="flex justify-center mb-6">
+                                    <Link
+                                        href="/"
+                                        className="text-3xl font-bold"
+                                    >
+                                        Euger
+                                    </Link>
+                                </div>
+                                <div className="space-y-4">
+                                    <Button
+                                        asChild
+                                        variant="ghost"
+                                        className="w-full justify-start text-lg"
+                                    >
+                                        <Link href="/">Home</Link>
+                                    </Button>
+                                    <Button
+                                        asChild
+                                        variant="ghost"
+                                        className="w-full justify-start text-lg"
+                                    >
+                                        <Link href="/about">About</Link>
+                                    </Button>
+                                    <Button
+                                        asChild
+                                        variant="ghost"
+                                        className="w-full justify-start text-lg"
+                                    >
+                                        <Link href="/experience">
+                                            Experience
+                                        </Link>
+                                    </Button>
+                                    <Button
+                                        asChild
+                                        variant="ghost"
+                                        className="w-full justify-start text-lg"
+                                    >
+                                        <Link href="/projects">Projects</Link>
+                                    </Button>
+                                    <Button
+                                        asChild
+                                        variant="ghost"
+                                        className="w-full justify-start text-lg"
+                                    >
+                                        <Link href="/techstack">
+                                            Tech Stack
+                                        </Link>
+                                    </Button>
+                                </div>
+                                <div className="flex justify-center space-x-4 mt-6">
+                                    <Link
+                                        href="https://github.com/yourusername"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <IconBrandGithub className="w-6 h-6" />
+                                    </Link>
+                                    <Link
+                                        href="https://linkedin.com/in/yourusername"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <IconBrandLinkedin className="w-6 h-6" />
+                                    </Link>
+                                    <Link
+                                        href="https://facebook.com/yourusername"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <IconBrandFacebook className="w-6 h-6" />
+                                    </Link>
+                                    <Link href="mailto:youremail@example.com">
+                                        <IconMail className="w-6 h-6" />
+                                    </Link>
+                                </div>
                             </div>
                         </DrawerContent>
                     </Drawer>

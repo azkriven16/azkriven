@@ -1,11 +1,10 @@
-import { Toaster } from "@/components/ui/sonner";
 import { baseURL, SITE_CONFIG } from "@/config/site";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
 import { Footer } from "@/components/custom/footer";
-import "./globals.css";
 import { Navbar } from "@/components/custom/navbar";
+import "./globals.css";
 
 export const metadata: Metadata = {
     title: `${SITE_CONFIG.firstName}'s Portfolio`,
@@ -39,8 +38,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={cn("antialiased font-poppins bg-secondary")}>
-                <Toaster />
+            <body className={cn("antialiased font-poppins mt-20")}>
                 <Navbar />
                 {children}
                 <Footer />
