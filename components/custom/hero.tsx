@@ -32,11 +32,11 @@ export const Hero = () => {
                         className="flex justify-center"
                     >
                         <a
-                            className="inline-flex items-center gap-x-2 border-2 border-green-500 text-sm p-1 ps-3 rounded-full transition"
+                            className="inline-flex items-center gap-x-2 border-2 text-sm p-1 ps-3 rounded-full transition"
                             href="#"
                         >
-                            Available for work
-                            <IconCircle fill="#22c55e" color="#22c55e" />
+                            Iloilo, Philippines
+                            <IconMapPin color="#22c55e" />
                         </a>
                     </motion.div>
 
@@ -46,25 +46,18 @@ export const Hero = () => {
                         transition={{ delay: 0.15, duration: 0.2 }}
                         className="text-4xl md:text-6xl font-bold"
                     >
-                        Transforming Digital Dreams into Reality
+                        Unleashing Creative <br /> Potential on the Web!
+                        <br />
+                        {`with </code>`}
                     </motion.h1>
 
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2, duration: 0.2 }}
-                        className="text-sm flex items-center justify-center"
-                    >
-                        <IconMapPin size={16} className="mr-1" />
-                        Iloilo, Philippines
-                    </motion.p>
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.25, duration: 0.2 }}
                         className="text-xl text-muted-foreground"
                     >
-                        Hi, my name is Euger. I'm a software engineer crafting
+                        Hi, my name is Euger . I'm a software engineer crafting
                         intuitive web solutions
                     </motion.p>
                     <motion.div

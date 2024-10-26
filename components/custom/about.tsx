@@ -3,6 +3,8 @@
 import { CERTS } from "@/config/certs";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { IconCode } from "@tabler/icons-react";
 
 export const About = () => {
     return (
@@ -29,7 +31,8 @@ export const About = () => {
                         transition={{ delay: 0.15, duration: 0.2 }}
                         className="text-xl text-muted-foreground mb-12"
                     >
-                        Get to know more about my background and qualifications.
+                        Get to know more about my background, qualifications,
+                        and passion for software development.
                     </motion.p>
 
                     <div className="space-y-12">
@@ -49,7 +52,9 @@ export const About = () => {
                                     Hi, I'm Euger, a dedicated software engineer
                                     crafting intuitive and functional web
                                     applications with a passion for clean code
-                                    and innovative solutions.
+                                    and innovative solutions. My journey in the
+                                    world of programming has been an exciting
+                                    adventure of continuous learning and growth.
                                 </motion.p>
                                 <motion.ul
                                     initial={{ opacity: 0 }}
@@ -57,22 +62,42 @@ export const About = () => {
                                     transition={{ delay: 0.3, duration: 0.2 }}
                                     className="list-disc pl-5 space-y-4"
                                 >
-                                    <li>I started coding in 2020</li>
                                     <li>
-                                        I have at least 1 year of experience
+                                        I started my coding journey in 2020,
+                                        diving headfirst into the world of web
+                                        development
+                                    </li>
+                                    <li>
+                                        I have at least 1 year of professional
+                                        experience, working on diverse projects
+                                        and honing my skills
                                     </li>
                                     <li>
                                         Most comfortable with React, Next.js,
-                                        and TypeScript
+                                        and TypeScript, but always eager to
+                                        learn new technologies
                                     </li>
                                 </motion.ul>
 
-                                <div className="flex flex-col gap-12 pt-12">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.35, duration: 0.2 }}
+                                >
+                                    <Button asChild>
+                                        <Link href="/tech-stack">
+                                            <IconCode className="mr-2 h-4 w-4" />{" "}
+                                            View My Tech Stack
+                                        </Link>
+                                    </Button>
+                                </motion.div>
+
+                                <div className="flex flex-col gap-12 ">
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{
-                                            delay: 0.35,
+                                            delay: 0.4,
                                             duration: 0.2,
                                         }}
                                         className="space-y-6"
@@ -87,17 +112,14 @@ export const About = () => {
                                                     Computer Science
                                                 </p>
                                                 <p className="text-muted-foreground">
-                                                    University of the
-                                                    Philippines, 2023
+                                                    Northern Iloilo State
+                                                    University, 2025
                                                 </p>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold">
-                                                    Full-Stack Development
-                                                    Bootcamp
-                                                </p>
-                                                <p className="text-muted-foreground">
-                                                    CodeAcademy, 2022
+                                                <p className="text-sm text-gray-600 mt-1">
+                                                    Focused on software
+                                                    engineering, mobile
+                                                    development and web
+                                                    development.
                                                 </p>
                                             </div>
                                             <div>
@@ -105,8 +127,13 @@ export const About = () => {
                                                     High School Diploma
                                                 </p>
                                                 <p className="text-muted-foreground">
-                                                    Iloilo National High School,
-                                                    2019
+                                                    Iloilo King of Glory
+                                                    Christian Academy, 2021
+                                                </p>
+                                                <p className="text-sm text-gray-600 mt-1">
+                                                    Graduated with honors.
+                                                    Active member of the
+                                                    school's computer club.
                                                 </p>
                                             </div>
                                         </div>
@@ -115,10 +142,10 @@ export const About = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{
-                                            delay: 0.4,
+                                            delay: 0.45,
                                             duration: 0.2,
                                         }}
-                                        className="space-y-6"
+                                        className="space-y-6 bg-white"
                                     >
                                         <h3 className="font-semibold text-xl">
                                             Certifications
@@ -137,7 +164,7 @@ export const About = () => {
                                                     }}
                                                     transition={{
                                                         delay:
-                                                            0.45 + index * 0.05,
+                                                            0.5 + index * 0.05,
                                                         duration: 0.2,
                                                     }}
                                                     className="space-y-2"

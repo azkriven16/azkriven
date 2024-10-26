@@ -38,7 +38,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={cn("antialiased font-poppins mt-20")}>
+            <body className={cn("antialiased font-poppins mt-20 md:mt-10")}>
                 <Navbar />
                 {children}
                 <Footer />

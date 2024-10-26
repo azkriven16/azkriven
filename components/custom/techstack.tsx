@@ -8,11 +8,45 @@ import {
     IconBrandPrisma,
     IconBrandReact,
     IconBrandTypescript,
+    IconBrandTailwind,
+    IconBrandHtml5,
+    IconBrandCss3,
+    IconBrandGit,
+    IconBrandGithub,
 } from "@tabler/icons-react";
-import { IconBrandTailwind } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const TechStack = () => {
+    const categories = [
+        {
+            name: "Front-end",
+            technologies: [
+                { icon: IconBrandHtml5, name: "HTML5" },
+                { icon: IconBrandCss3, name: "CSS3" },
+                { icon: IconBrandJavascript, name: "JavaScript" },
+                { icon: IconBrandTypescript, name: "TypeScript" },
+                { icon: IconBrandReact, name: "React" },
+                { icon: IconBrandNextjs, name: "Next.js" },
+                { icon: IconBrandTailwind, name: "Tailwind CSS" },
+            ],
+        },
+        {
+            name: "Back-end",
+            technologies: [
+                { icon: IconBrandMongodb, name: "MongoDB" },
+                { icon: IconBrandPrisma, name: "Prisma" },
+                { icon: IconBrandFirebase, name: "Firebase" },
+            ],
+        },
+        {
+            name: "Version Control",
+            technologies: [
+                { icon: IconBrandGit, name: "Git" },
+                { icon: IconBrandGithub, name: "GitHub" },
+            ],
+        },
+    ];
+
     return (
         <AnimatePresence key="techstack">
             <motion.div
@@ -40,56 +74,32 @@ export const TechStack = () => {
                         These are the technologies I work with most frequently.
                     </motion.p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                        {[
-                            {
-                                icon: IconBrandTypescript,
-                                name: "TypeScript",
-                                description: "Typed JavaScript superset",
-                            },
-                            {
-                                icon: IconBrandReact,
-                                name: "React",
-                                description: "UI building library",
-                            },
-                            {
-                                icon: IconBrandNextjs,
-                                name: "Next.js",
-                                description: "React production framework",
-                            },
-                            {
-                                icon: IconBrandPrisma,
-                                name: "Prisma",
-                                description: "Modern database toolkit",
-                            },
-                            {
-                                icon: IconBrandMongodb,
-                                name: "MongoDB",
-                                description: "NoSQL database solution",
-                            },
-                            {
-                                icon: IconBrandTailwind,
-                                name: "Tailwind CSS",
-                                description: "Utility-first CSS framework",
-                            },
-                        ].map((tech, index) => (
-                            <motion.div
-                                key={tech.name}
+                    {categories.map((category, categoryIndex) => (
+                        <div key={category.name} className="mb-12">
+                            <motion.h3
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 + index * 0.05 }}
-                                className="flex items-center p-4 shadow-md border rounded-lg"
+                                transition={{ delay: 0.2 + categoryIndex * 0.1 }}
+                                className="text-2xl font-semibold mb-6"
                             >
-                                <tech.icon className="w-12 h-12 mr-4" />
-                                <div>
-                                    <p className="font-semibold">{tech.name}</p>
-                                    <p className="text-sm text-muted-foreground mt-1">
-                                        {tech.description}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+                                {category.name}
+                            </motion.h3>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                                {category.technologies.map((tech, index) => (
+                                    <motion.div
+                                        key={tech.name}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.3 + categoryIndex * 0.1 + index * 0.05 }}
+                                        className="flex flex-col items-center justify-center p-4 shadow-md border rounded-lg text-center"
+                                    >
+                                        <tech.icon className="w-12 h-12 mb-2" />
+                                        <p className="font-semibold">{tech.name}</p>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </motion.div>
         </AnimatePresence>

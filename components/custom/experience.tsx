@@ -56,9 +56,50 @@ export const Experience = () => {
                                 <p className="text-sm text-muted-foreground mb-4">
                                     {item.date}
                                 </p>
-                                <p className="text-base text-muted-foreground">
-                                    {item.desc}
-                                </p>
+                                <ul className="list-disc list-inside mb-4">
+                                    {item.desc.map((description, descIndex) => (
+                                        <li
+                                            key={descIndex}
+                                            className="text-base text-muted-foreground mb-2"
+                                        >
+                                            {description}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="mb-4">
+                                    <h4 className="text-lg font-semibold mb-2">
+                                        Technologies:
+                                    </h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {item.technologies.map(
+                                            (tech, techIndex) => (
+                                                <span
+                                                    key={techIndex}
+                                                    className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-sm"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            )
+                                        )}
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 className="text-lg font-semibold mb-2">
+                                        Key Achievements:
+                                    </h4>
+                                    <ul className="list-disc list-inside">
+                                        {item.achievements.map(
+                                            (achievement, achievementIndex) => (
+                                                <li
+                                                    key={achievementIndex}
+                                                    className="text-base text-muted-foreground mb-1"
+                                                >
+                                                    {achievement}
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
