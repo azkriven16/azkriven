@@ -8,6 +8,7 @@ import {
     IconBrandLinkedin,
     IconBrandFacebook,
     IconMail,
+    IconPicnicTable,
 } from "@tabler/icons-react";
 import { Drawer } from "@/components/ui/drawer";
 import { DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
@@ -18,8 +19,9 @@ export const Navbar = () => {
     return (
         <nav className="py-4 px-6 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
             <div className="max-w-6xl mx-auto flex justify-between items-center">
-                <Link href="/" className="text-xl font-bold">
-                    Euger
+                <Link href="/" className="flex items-center">
+                    <IconPicnicTable />
+                    zkriven
                 </Link>
                 <div className="hidden md:flex space-x-4">
                     <Button asChild variant="ghost">
@@ -48,9 +50,10 @@ export const Navbar = () => {
                                 <div className="flex justify-center mb-6">
                                     <Link
                                         href="/"
-                                        className="text-3xl font-bold"
+                                        className="flex items-center"
                                     >
-                                        Euger
+                                        <IconPicnicTable />
+                                        zkriven
                                     </Link>
                                 </div>
                                 <div className="space-y-4">

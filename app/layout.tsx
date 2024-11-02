@@ -37,8 +37,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" suppressHydrationWarning>
-            <body className={cn("antialiased font-poppins mt-20 md:mt-10")}>
+        <html lang="en" suppressHydrationWarning className="dark">
+            <body className={cn(
+                "antialiased font-poppins mt-20 md:mt-10",
+                "bg-zinc-950 text-zinc-100"
+            )}>
                 <Navbar />
                 {children}
                 <Footer />
