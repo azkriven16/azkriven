@@ -58,7 +58,7 @@ export const Projects = () => {
                                         {item.title}
                                     </h3>
                                     <p className="text-muted-foreground flex-grow mb-4">
-                                        {item.description}
+                                        {item.description.split(".")[0]}.
                                     </p>
                                 </motion.div>
                             </Link>
