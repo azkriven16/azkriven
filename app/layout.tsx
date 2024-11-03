@@ -18,6 +18,20 @@ export const metadata: Metadata = {
         siteName: `${SITE_CONFIG.firstName}'s Portfolio`,
         locale: "en_US",
         type: "website",
+        images: [
+            {
+                url: "/screenshot-desktop.png",
+                width: 1200,
+                height: 630,
+                alt: "Portfolio Desktop Screenshot",
+            },
+            {
+                url: "/screenshot-mobile.png",
+                width: 390,
+                height: 844,
+                alt: "Portfolio Mobile Screenshot",
+            },
+        ],
     },
     robots: {
         index: true,
