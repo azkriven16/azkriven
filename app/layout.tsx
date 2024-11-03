@@ -11,9 +11,18 @@ export const metadata: Metadata = {
     title: `${SITE_CONFIG.firstName}'s Portfolio`,
     description: SITE_CONFIG.description,
     metadataBase: new URL(`https://${baseURL}`),
+    keywords: [
+        "portfolio",
+        "web developer",
+        "software engineer",
+        SITE_CONFIG.firstName,
+    ],
+    authors: [{ name: SITE_CONFIG.name }],
+    creator: SITE_CONFIG.name,
+    publisher: SITE_CONFIG.name,
     openGraph: {
-        title: `${SITE_CONFIG.firstName}'s Portfolio`,
-        description: "Portfolio website showcasing my work.",
+        title: `${SITE_CONFIG.firstName}'s Portfolio - Software Engineer`,
+        description: SITE_CONFIG.description,
         url: baseURL,
         siteName: `${SITE_CONFIG.firstName}'s Portfolio`,
         locale: "en_US",
@@ -23,15 +32,16 @@ export const metadata: Metadata = {
                 url: "/screenshot-desktop.png",
                 width: 1200,
                 height: 630,
-                alt: "Portfolio Desktop Screenshot",
-            },
-            {
-                url: "/screenshot-mobile.png",
-                width: 390,
-                height: 844,
-                alt: "Portfolio Mobile Screenshot",
+                alt: `${SITE_CONFIG.firstName}'s Portfolio Preview`,
             },
         ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: `${SITE_CONFIG.firstName}'s Portfolio - Software Engineer`,
+        description: SITE_CONFIG.description,
+        images: ["/screenshot-desktop.png"],
+        creator: "@yourtwitterhandle",
     },
     robots: {
         index: true,
@@ -43,6 +53,12 @@ export const metadata: Metadata = {
             "max-image-preview": "large",
             "max-snippet": -1,
         },
+    },
+    verification: {
+        google: "your-google-verification-code",
+    },
+    alternates: {
+        canonical: `https://${baseURL}`,
     },
 };
 
