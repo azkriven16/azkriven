@@ -102,7 +102,7 @@ export const AIChatbot = () => {
                             onSubmit={handleSubmit}
                             className="border-t border-zinc-800 p-3 md:p-4 bg-zinc-900"
                         >
-                            <div className="flex gap-2">
+                            <div className="flex items-center gap-2">
                                 <input
                                     className="flex-1 p-2 text-sm md:text-base border border-zinc-700 rounded-md bg-zinc-800 text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-600"
                                     value={input}
@@ -113,8 +113,8 @@ export const AIChatbot = () => {
                                     type="submit"
                                     size="icon"
                                     variant="default"
+                                    className="min-w-[36px] h-[36px] flex-shrink-0"
                                     disabled={isLoading}
-                                    className="min-w-[40px]"
                                 >
                                     <IconSend size={18} color="black" />
                                 </Button>
