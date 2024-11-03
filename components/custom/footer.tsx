@@ -7,6 +7,7 @@ import {
     IconBrandTwitter,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { SITE_CONFIG } from "@/config/site";
 
 export const Footer = () => {
     return (
@@ -66,7 +67,7 @@ export const Footer = () => {
                     <div className="flex flex-col items-center md:items-end space-y-4">
                         <div className="flex items-center space-x-4">
                             <a
-                                href="https://github.com/eugercodes"
+                                href={SITE_CONFIG.socials.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center space-x-2 hover:text-primary"
@@ -75,7 +76,7 @@ export const Footer = () => {
                                 <span className="text-sm">GitHub</span>
                             </a>
                             <a
-                                href="https://www.linkedin.com/in/euger-bonete/"
+                                href={SITE_CONFIG.socials.linkedin}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center space-x-2 hover:text-primary"
@@ -84,13 +85,13 @@ export const Footer = () => {
                                 <span className="text-sm">LinkedIn</span>
                             </a>
                             <a
-                                href="https://twitter.com/eugercodes"
+                                href={SITE_CONFIG.socials.facebook}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center space-x-2 hover:text-primary"
                             >
                                 <IconBrandTwitter className="w-5 h-5" />
-                                <span className="text-sm">Twitter</span>
+                                <span className="text-sm">Facebook</span>
                             </a>
                         </div>
                         <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">

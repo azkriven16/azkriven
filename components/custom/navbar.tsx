@@ -14,6 +14,7 @@ import { Drawer } from "@/components/ui/drawer";
 import { DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { SITE_CONFIG } from "@/config/site";
 
 export const Navbar = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -210,19 +211,22 @@ export const Navbar = () => {
                                         {[
                                             {
                                                 icon: IconBrandGithub,
-                                                href: "https://github.com/yourusername",
+                                                href: SITE_CONFIG.socials
+                                                    .github,
                                             },
                                             {
                                                 icon: IconBrandLinkedin,
-                                                href: "https://linkedin.com/in/yourusername",
+                                                href: SITE_CONFIG.socials
+                                                    .linkedin,
                                             },
                                             {
                                                 icon: IconBrandFacebook,
-                                                href: "https://facebook.com/yourusername",
+                                                href: SITE_CONFIG.socials
+                                                    .facebook,
                                             },
                                             {
                                                 icon: IconMail,
-                                                href: "mailto:youremail@example.com",
+                                                href: `mailto:${SITE_CONFIG.socials.email}`,
                                             },
                                         ].map((social, i) => (
                                             <motion.div

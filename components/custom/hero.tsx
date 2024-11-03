@@ -11,6 +11,7 @@ import {
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { SITE_CONFIG } from "@/config/site";
 
 export const Hero = () => {
     return (
@@ -44,7 +45,7 @@ export const Hero = () => {
                             className="inline-flex items-center gap-x-2 border-2 text-sm p-1 ps-3 rounded-full transition"
                             href="#"
                         >
-                            Iloilo, Philippines
+                            {SITE_CONFIG.address}
                             <IconMapPin />
                         </a>
                     </motion.div>
@@ -85,7 +86,7 @@ export const Hero = () => {
                     >
                         <Button asChild variant="ghost" size="icon">
                             <Link
-                                href="https://github.com/yourusername"
+                                href={SITE_CONFIG.socials.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -95,7 +96,7 @@ export const Hero = () => {
                         </Button>
                         <Button asChild variant="ghost" size="icon">
                             <Link
-                                href="https://linkedin.com/in/yourusername"
+                                href={SITE_CONFIG.socials.linkedin}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -105,7 +106,7 @@ export const Hero = () => {
                         </Button>
                         <Button asChild variant="ghost" size="icon">
                             <Link
-                                href="https://facebook.com/yourusername"
+                                href={SITE_CONFIG.socials.facebook}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -115,7 +116,7 @@ export const Hero = () => {
                         </Button>
                         <Button asChild variant="ghost" size="icon">
                             <Link
-                                href="mailto:youremail@example.com"
+                                href={`mailto:${SITE_CONFIG.socials.email}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
