@@ -3,13 +3,14 @@
 import { useState, useRef, useEffect } from "react";
 import { useChat } from "ai/react";
 import { Button } from "@/components/ui/button";
-import { IconMessage } from "@tabler/icons-react";
+import { IconMessage, IconSend } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 export const AIChatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const { messages, input, handleInputChange, handleSubmit } = useChat();
+    const { messages, input, handleInputChange, handleSubmit, isLoading } =
+        useChat();
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -101,12 +102,22 @@ export const AIChatbot = () => {
                             onSubmit={handleSubmit}
                             className="border-t border-zinc-800 p-3 md:p-4 bg-zinc-900"
                         >
-                            <input
-                                className="w-full p-2 text-sm md:text-base border border-zinc-700 rounded-md bg-zinc-800 text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-600"
-                                value={input}
-                                placeholder="Type a message..."
-                                onChange={handleInputChange}
-                            />
+                            <div className="flex gap-2">
+                                <input
+                                    className="flex-1 p-2 text-sm md:text-base border border-zinc-700 rounded-md bg-zinc-800 text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-600"
+                                    value={input}
+                                    placeholder="Type a message..."
+                                    onChange={handleInputChange}
+                                />
+                                <Button
+                                    type="submit"
+                                    size="icon"
+                                    variant="default"
+                                    disabled={isLoading}
+                                >
+                                    <IconSend size={18} color="black" />
+                                </Button>
+                            </div>
                         </form>
                     </motion.div>
                 )}
