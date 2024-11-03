@@ -12,9 +12,9 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.description,
     metadataBase: new URL(`https://${baseURL}`),
     keywords: [
-        "portfolio",
-        "web developer",
-        "software engineer",
+        "portfolio philippines",
+        "web developer philippines",
+        "software engineer philippines",
         SITE_CONFIG.firstName,
     ],
     authors: [{ name: SITE_CONFIG.name }],
@@ -59,6 +59,9 @@ export const metadata: Metadata = {
     },
     alternates: {
         canonical: `https://${baseURL}`,
+    },
+    icons: {
+        icon: "/icon.svg",
     },
 };
 
