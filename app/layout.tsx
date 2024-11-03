@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/custom/footer";
 import { Navbar } from "@/components/custom/navbar";
+import { AIChatbot } from "@/components/custom/ai-chatbot";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -38,13 +39,16 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning className="dark">
-            <body className={cn(
-                "antialiased font-poppins mt-20 md:mt-10",
-                "bg-zinc-950 text-zinc-100"
-            )}>
+            <body
+                className={cn(
+                    "antialiased font-poppins mt-20 md:mt-10",
+                    "bg-zinc-950 text-zinc-100"
+                )}
+            >
                 <Navbar />
                 {children}
                 <Footer />
+                <AIChatbot />
             </body>
         </html>
     );

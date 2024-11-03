@@ -1,6 +1,7 @@
 "use client";
 
 import { CERTS } from "@/config/certs";
+import { EDUCATION } from "@/config/education";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -85,7 +86,7 @@ export const About = () => {
                                     transition={{ delay: 0.35, duration: 0.2 }}
                                 >
                                     <Button asChild>
-                                        <Link href="/tech-stack">
+                                        <Link href="/techstack">
                                             <IconCode className="mr-2 h-4 w-4" />{" "}
                                             View My Tech Stack
                                         </Link>
@@ -106,36 +107,19 @@ export const About = () => {
                                             Education
                                         </h3>
                                         <div className="space-y-4">
-                                            <div>
-                                                <p className="font-semibold">
-                                                    Bachelor of Science in
-                                                    Computer Science
-                                                </p>
-                                                <p className="text-muted-foreground">
-                                                    Northern Iloilo State
-                                                    University, 2025
-                                                </p>
-                                                <p className="text-sm text-gray-600 mt-1">
-                                                    Focused on software
-                                                    engineering, mobile
-                                                    development and web
-                                                    development.
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold">
-                                                    High School Diploma
-                                                </p>
-                                                <p className="text-muted-foreground">
-                                                    Iloilo King of Glory
-                                                    Christian Academy, 2021
-                                                </p>
-                                                <p className="text-sm text-gray-600 mt-1">
-                                                    Graduated with honors.
-                                                    Active member of the
-                                                    school's computer club.
-                                                </p>
-                                            </div>
+                                            {EDUCATION.map((edu, index) => (
+                                                <div key={index}>
+                                                    <p className="font-semibold">
+                                                        {edu.degree}
+                                                    </p>
+                                                    <p className="text-muted-foreground">
+                                                        {edu.school}, {edu.year}
+                                                    </p>
+                                                    <p className="text-sm text-gray-600 mt-1">
+                                                        {edu.description}
+                                                    </p>
+                                                </div>
+                                            ))}
                                         </div>
                                     </motion.div>
                                     <motion.div

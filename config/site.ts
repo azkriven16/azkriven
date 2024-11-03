@@ -47,25 +47,15 @@ export const BLOG = [
     },
 ];
 
-export const SKILLS = [
-    {
-        name: "Web Development",
-        stack: ["Typescript", "React", "Next.js", "Tailwind CSS"],
-    },
-    {
-        name: "Backend Development",
-        stack: ["Prisma", "Firebase", "MongoDB", "Node.js"],
-    },
-    {
-        name: "Tools & Environments",
-        stack: ["VSCode", "Git", "Docker"],
-    },
-];
-
 export const SITE_CONFIG = {
     name: "Euger Bonete",
     description: "Euger Bonete Jr's portfolio website",
     title: "Euger Portfolio",
     firstName: "Euger",
     address: "Iloilo, Philippines",
+    socials: {
+        github: "https://github.com/azkriven16",
+        linkedin: "https://www.linkedin.com/in/euger-bonete/",
+        facebook: "https://facebook.com/euger.bonete.9",
+    },
 };

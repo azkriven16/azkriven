@@ -15,37 +15,23 @@ import {
     IconBrandGithub,
 } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SKILLS } from "@/config/skills";
 
 export const TechStack = () => {
-    const categories = [
-        {
-            name: "Front-end",
-            technologies: [
-                { icon: IconBrandHtml5, name: "HTML5" },
-                { icon: IconBrandCss3, name: "CSS3" },
-                { icon: IconBrandJavascript, name: "JavaScript" },
-                { icon: IconBrandTypescript, name: "TypeScript" },
-                { icon: IconBrandReact, name: "React" },
-                { icon: IconBrandNextjs, name: "Next.js" },
-                { icon: IconBrandTailwind, name: "Tailwind CSS" },
-            ],
-        },
-        {
-            name: "Back-end",
-            technologies: [
-                { icon: IconBrandMongodb, name: "MongoDB" },
-                { icon: IconBrandPrisma, name: "Prisma" },
-                { icon: IconBrandFirebase, name: "Firebase" },
-            ],
-        },
-        {
-            name: "Version Control",
-            technologies: [
-                { icon: IconBrandGit, name: "Git" },
-                { icon: IconBrandGithub, name: "GitHub" },
-            ],
-        },
-    ];
+    const iconMap = {
+        HTML5: IconBrandHtml5,
+        CSS3: IconBrandCss3,
+        JavaScript: IconBrandJavascript,
+        TypeScript: IconBrandTypescript,
+        React: IconBrandReact,
+        "Next.js": IconBrandNextjs,
+        "Tailwind CSS": IconBrandTailwind,
+        MongoDB: IconBrandMongodb,
+        Prisma: IconBrandPrisma,
+        Firebase: IconBrandFirebase,
+        Git: IconBrandGit,
+        GitHub: IconBrandGithub,
+    };
 
     return (
         <AnimatePresence key="techstack">
@@ -74,29 +60,42 @@ export const TechStack = () => {
                         These are the technologies I work with most frequently.
                     </motion.p>
 
-                    {categories.map((category, categoryIndex) => (
+                    {SKILLS.map((category, categoryIndex) => (
                         <div key={category.name} className="mb-12">
                             <motion.h3
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 + categoryIndex * 0.1 }}
+                                transition={{
+                                    delay: 0.2 + categoryIndex * 0.1,
+                                }}
                                 className="text-2xl font-semibold mb-6"
                             >
                                 {category.name}
                             </motion.h3>
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                                {category.technologies.map((tech, index) => (
-                                    <motion.div
-                                        key={tech.name}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.3 + categoryIndex * 0.1 + index * 0.05 }}
-                                        className="flex flex-col items-center justify-center p-4 shadow-md border rounded-lg text-center"
-                                    >
-                                        <tech.icon className="w-12 h-12 mb-2" />
-                                        <p className="font-semibold">{tech.name}</p>
-                                    </motion.div>
-                                ))}
+                                {category.stack.map((tech, index) => {
+                                    const Icon =
+                                        iconMap[tech as keyof typeof iconMap];
+                                    return (
+                                        <motion.div
+                                            key={tech}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{
+                                                delay:
+                                                    0.3 +
+                                                    categoryIndex * 0.1 +
+                                                    index * 0.05,
+                                            }}
+                                            className="flex flex-col items-center justify-center p-4 shadow-md border rounded-lg text-center"
+                                        >
+                                            <Icon className="w-12 h-12 mb-2" />
+                                            <p className="font-semibold">
+                                                {tech}
+                                            </p>
+                                        </motion.div>
+                                    );
+                                })}
                             </div>
                         </div>
                     ))}

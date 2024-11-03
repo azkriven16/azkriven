@@ -6,6 +6,7 @@ export const PROJECTS = [
         img: "/projects/nisuboard.png",
         img_mobile: "/projects/nisuboard-mobile.png",
         source: "https://github.com/azkriven16",
+        category: "fullstack",
         description:
             "Nisuboard is a boarding house mapping application that helps users find and explore available boarding houses in their area. Built with Next.js, Prisma, and TypeScript, it features user authentication via Clerk, real-time updates with React Query, and a responsive UI using Radix UI components and Tailwind CSS. Includes web push notifications and dark mode support.",
     },
@@ -16,6 +17,7 @@ export const PROJECTS = [
         img: "/projects/what-the-blog-light.png",
         img_mobile: "/projects/nisuboard-mobile.png",
         source: "https://github.com/EugerBonete/organizify",
+        category: "frontend",
         description: "task management solution, organize your daily tasks.",
     },
     {
@@ -25,6 +27,7 @@ export const PROJECTS = [
         img: "/projects/what-the-blog-light.png",
         img_mobile: "/projects/nisuboard-mobile.png",
         source: "https://github.com/EugerBonete/what-the-blog",
+        category: "frontend",
         description: "my blog website using mdx",
     },
 ];

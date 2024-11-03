@@ -22,7 +22,7 @@ export const Projects = () => {
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-4xl font-bold mb-8"
                     >
-                        What I've Been Working On
+                        Featured Projects & Achievements
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -30,8 +30,7 @@ export const Projects = () => {
                         transition={{ delay: 0.15 }}
                         className="text-xl text-muted-foreground mb-12"
                     >
-                        Explore my latest projects and see how I bring ideas to
-                        life.
+                        Showcasing my key projects and technical achievements that demonstrate my expertise and impact.
                     </motion.p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

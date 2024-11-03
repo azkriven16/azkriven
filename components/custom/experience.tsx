@@ -83,23 +83,6 @@ export const Experience = () => {
                                         )}
                                     </div>
                                 </div>
-                                <div>
-                                    <h4 className="text-lg font-semibold mb-2">
-                                        Key Achievements:
-                                    </h4>
-                                    <ul className="list-disc list-inside">
-                                        {item.achievements.map(
-                                            (achievement, achievementIndex) => (
-                                                <li
-                                                    key={achievementIndex}
-                                                    className="text-base text-muted-foreground mb-1"
-                                                >
-                                                    {achievement}
-                                                </li>
-                                            )
-                                        )}
-                                    </ul>
-                                </div>
                             </motion.div>
                         ))}
                     </div>
