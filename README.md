@@ -4,6 +4,16 @@ This is my personal portfolio website built with Next.js, featuring a modern des
 
 If you like this portfolio template, feel free to use it for your own portfolio! Don't forget to ⭐ star this repository if you find it helpful.
 
+## Screenshots
+
+### Desktop View
+
+![Desktop Screenshot](./public/screenshot-desktop.png)
+
+### Mobile View
+
+![Mobile Screenshot](./public/screenshot-mobile.png)
+
 ## Features
 
 -   Modern and responsive design
