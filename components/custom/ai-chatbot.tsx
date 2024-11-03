@@ -114,6 +114,7 @@ export const AIChatbot = () => {
                                     size="icon"
                                     variant="default"
                                     disabled={isLoading}
+                                    className="min-w-[40px]"
                                 >
                                     <IconSend size={18} color="black" />
                                 </Button>

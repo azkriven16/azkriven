@@ -7,7 +7,7 @@ If you like this portfolio template, feel free to use it for your own portfolio!
 ## Screenshots
 
 <div style="display: flex; align-items: center; gap: 20px;">
-    <img src="./public/screenshot-desktop.png" alt="Desktop Screenshot" width="70%"/>
+    <img src="./public/screenshot-desktop.png" alt="Desktop Screenpshot" width="70%"/>
     <img src="./public/screenshot-mobile.png" alt="Mobile Screenshot" width="25%"/>
 </div>
 
