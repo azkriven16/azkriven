@@ -21,9 +21,9 @@ export const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
-                className="flex flex-col items-center justify-center min-h-screen"
+                className="flex flex-col items-center justify-start md:justify-center min-h-screen"
             >
-                <div className="max-w-4xl text-center px-4 space-y-5 pb-20 md:pb-0">
+                <div className="max-w-4xl text-center px-4 space-y-5">
                     <motion.div
                         initial={{ scale: 0.9 }}
                         animate={{ scale: 1 }}
