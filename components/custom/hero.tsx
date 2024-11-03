@@ -24,6 +24,16 @@ export const Hero = () => {
                 className="flex flex-col items-center justify-start md:justify-center min-h-screen"
             >
                 <div className="max-w-4xl text-center px-4 space-y-5">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.15, duration: 0.2 }}
+                        className="text-4xl md:text-6xl font-bold"
+                    >
+                        Unleashing Creative <br /> Potential on the Web!
+                        <br />
+                        {`with </code>`}
+                    </motion.h1>
                     <motion.div
                         initial={{ scale: 0.9 }}
                         animate={{ scale: 1 }}
@@ -35,29 +45,17 @@ export const Hero = () => {
                             href="#"
                         >
                             Iloilo, Philippines
-                            <IconMapPin color="#22c55e" />
+                            <IconMapPin />
                         </a>
                     </motion.div>
-
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.15, duration: 0.2 }}
-                        className="text-4xl md:text-6xl font-bold"
-                    >
-                        Unleashing Creative <br /> Potential on the Web!
-                        <br />
-                        {`with </code>`}
-                    </motion.h1>
-
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.25, duration: 0.2 }}
                         className="text-xl text-muted-foreground"
                     >
-                        Hi, my name is Euger . I'm a software engineer crafting
-                        intuitive web solutions
+                        Hi, my name is Euger (azkriven). I'm a software engineer
+                        crafting intuitive web solutions
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

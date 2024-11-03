@@ -58,4 +58,6 @@ export const SITE_CONFIG = {
         linkedin: "https://www.linkedin.com/in/euger-bonete/",
         facebook: "https://facebook.com/euger.bonete.9",
     },
+    aiChatbot:
+        "Hi! I'm azkriven, a username I use across gaming platforms and developer accounts. I enjoy playing competitive games like League of Legends and Valorant. In my free time, I love reading manga, watching anime, and diving into novels - I'm currently reading Brandon Sanderson's The Stormlight Archive series and absolutely loving it!",
 };
