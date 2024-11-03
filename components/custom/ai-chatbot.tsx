@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useChat } from "ai/react";
 import { Button } from "@/components/ui/button";
 import { IconMessage } from "@tabler/icons-react";
@@ -10,6 +10,15 @@ import Link from "next/link";
 export const AIChatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { messages, input, handleInputChange, handleSubmit } = useChat();
+    const messagesEndRef = useRef<HTMLDivElement>(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [messages]);
 
     const renderMessageContent = (content: string) => {
         // Regular expression to match markdown-style links [text](url)
@@ -85,6 +94,7 @@ export const AIChatbot = () => {
                                     {renderMessageContent(message.content)}
                                 </div>
                             ))}
+                            <div ref={messagesEndRef} />
                         </div>
 
                         <form
