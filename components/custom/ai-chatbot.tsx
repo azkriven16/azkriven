@@ -58,12 +58,11 @@ export const AIChatbot = () => {
         <>
             <Button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-4 right-4 md:bottom-6 md:right-6 rounded-full p-3 md:p-4 shadow-xl bg-white hover:bg-gray-100"
-                variant="default"
+                className="fixed bottom-4 right-4 md:bottom-6 md:right-6 rounded-full bg-white hover:bg-gray-100 w-14 h-14 md:w-16 md:h-16"
             >
                 <IconMessage
-                    size={20}
-                    className="md:w-6 md:h-6"
+                    size={24}
+                    className="md:w-8 md:h-8"
                     color="black"
                 />
             </Button>
@@ -102,9 +101,9 @@ export const AIChatbot = () => {
                             onSubmit={handleSubmit}
                             className="border-t border-zinc-800 p-3 md:p-4 bg-zinc-900"
                         >
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 space-x-2">
                                 <input
-                                    className="flex-1 p-2 text-sm md:text-base border border-zinc-700 rounded-md bg-zinc-800 text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-600"
+                                    className="flex-1 p-2 text-sm md:text-base border border-zinc-700 rounded-md bg-zinc-800 text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-600 min-w-[100px]"
                                     value={input}
                                     placeholder="Type a message..."
                                     onChange={handleInputChange}
@@ -113,10 +112,14 @@ export const AIChatbot = () => {
                                     type="submit"
                                     size="icon"
                                     variant="default"
-                                    className="min-w-[36px] h-[36px] flex-shrink-0"
                                     disabled={isLoading}
+                                    className="min-w-[32px] w-8 h-8 md:w-10 md:h-10 flex-shrink-0"
                                 >
-                                    <IconSend size={18} color="black" />
+                                    <IconSend
+                                        size={16}
+                                        className="md:w-5 md:h-5"
+                                        color="black"
+                                    />
                                 </Button>
                             </div>
                         </form>
