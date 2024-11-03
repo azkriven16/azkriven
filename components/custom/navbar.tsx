@@ -40,6 +40,10 @@ export const Navbar = () => {
         },
     };
 
+    const handleLinkClick = () => {
+        setIsDrawerOpen(false);
+    };
+
     return (
         <motion.nav
             initial="hidden"
@@ -128,6 +132,7 @@ export const Navbar = () => {
                                         >
                                             <Link
                                                 href="/"
+                                                onClick={handleLinkClick}
                                                 className={`flex items-center ${
                                                     pathname === "/"
                                                         ? "text-primary"
@@ -176,6 +181,9 @@ export const Navbar = () => {
                                                     >
                                                         <Link
                                                             href={href}
+                                                            onClick={
+                                                                handleLinkClick
+                                                            }
                                                             className={
                                                                 pathname ===
                                                                 href
@@ -227,6 +235,7 @@ export const Navbar = () => {
                                             >
                                                 <Link
                                                     href={social.href}
+                                                    onClick={handleLinkClick}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                 >
