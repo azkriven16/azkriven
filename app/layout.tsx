@@ -39,6 +39,10 @@ export const metadata: Metadata = {
     verification: {
         google: "_-DsPVM1mKXI1ed-cTqkSHsCYYUB6PbqhC140RyX1kg",
     },
+    other: {
+        "google-site-verification":
+            "_-DsPVM1mKXI1ed-cTqkSHsCYYUB6PbqhC140RyX1kg",
+    },
 };
 
 export default function RootLayout({
