@@ -49,7 +49,8 @@ export const BLOG = [
 
 export const SITE_CONFIG = {
     name: "Euger Bonete",
-    description: "Euger Bonete Jr's portfolio website",
+    description:
+        "Euger Bonete Jr's portfolio website - A TypeScript, Next.js, and React developer",
     title: "Euger Portfolio",
     firstName: "Euger",
     address: "Iloilo, Philippines",

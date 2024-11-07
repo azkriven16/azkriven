@@ -10,7 +10,7 @@ import "./globals.css";
 export const metadata: Metadata = {
     title: `${SITE_CONFIG.firstName}'s Portfolio`,
     description: SITE_CONFIG.description,
-    metadataBase: new URL(`https://${baseURL}`),
+    metadataBase: new URL(`${baseURL}`),
     keywords: [
         "Euger Bonete",
         "Euger Bonete portfolio",
