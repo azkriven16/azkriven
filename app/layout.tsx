@@ -24,37 +24,13 @@ export const metadata: Metadata = {
         title: `${SITE_CONFIG.firstName}'s Portfolio - Software Engineer`,
         description: SITE_CONFIG.description,
         url: baseURL,
-        siteName: `${SITE_CONFIG.firstName}'s Portfolio`,
-        locale: "en_US",
-        type: "website",
-        images: `${baseURL}api/og`,
+        images: "https://azkriven.vercel.app/api/og",
     },
     twitter: {
         card: "summary_large_image",
         title: `${SITE_CONFIG.firstName}'s Portfolio - Software Engineer`,
         description: SITE_CONFIG.description,
-        images: ["/screenshot-desktop.png"],
-        creator: "@yourtwitterhandle",
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            "max-video-preview": -1,
-            "max-image-preview": "large",
-            "max-snippet": -1,
-        },
-    },
-    verification: {
-        google: "your-google-verification-code",
-    },
-    alternates: {
-        canonical: `https://${baseURL}`,
-    },
-    icons: {
-        icon: "/icon.svg",
+        images: ["https://azkriven.vercel.app/api/og"],
     },
 };
 
