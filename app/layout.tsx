@@ -36,6 +36,9 @@ export const metadata: Metadata = {
         description: SITE_CONFIG.description,
         images: "https://azkriven.vercel.app/api/og",
     },
+    verification: {
+        google: "_-DsPVM1mKXI1ed-cTqkSHsCYYUB6PbqhC140RyX1kg",
+    },
 };
 
 export default function RootLayout({
@@ -45,10 +48,6 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning className="dark">
-            <meta
-                name="google-site-verification"
-                content="_-DsPVM1mKXI1ed-cTqkSHsCYYUB6PbqhC140RyX1kg"
-            />
             <body
                 className={cn(
                     "antialiased font-poppins mt-20 md:mt-10",
