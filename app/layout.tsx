@@ -18,6 +18,8 @@ export const metadata: Metadata = {
         "Euger Bonete software engineer",
         "Euger Bonete web developer",
         "Euger Bonete portfolio website",
+        "Euger Bonete nisu",
+        "Euger Bonete cics",
     ],
     authors: [{ name: SITE_CONFIG.name }],
     creator: SITE_CONFIG.name,
@@ -26,13 +28,13 @@ export const metadata: Metadata = {
         title: `${SITE_CONFIG.firstName}'s Portfolio - Software Engineer`,
         description: SITE_CONFIG.description,
         url: baseURL,
-        images: "https://azkriven.vercel.app/screenshot-desktop.png",
+        images: "https://azkriven.vercel.app/api/og",
     },
     twitter: {
         card: "summary_large_image",
         title: `${SITE_CONFIG.firstName}'s Portfolio - Software Engineer`,
         description: SITE_CONFIG.description,
-        images: "https://azkriven.vercel.app/screenshot-desktop.png",
+        images: "https://azkriven.vercel.app/api/og",
     },
 };
 
