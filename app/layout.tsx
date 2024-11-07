@@ -45,6 +45,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning className="dark">
+            <meta
+                name="google-site-verification"
+                content="_-DsPVM1mKXI1ed-cTqkSHsCYYUB6PbqhC140RyX1kg"
+            />
             <body
                 className={cn(
                     "antialiased font-poppins mt-20 md:mt-10",
