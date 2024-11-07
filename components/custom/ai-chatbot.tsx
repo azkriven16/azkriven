@@ -41,7 +41,7 @@ export const AIChatbot = () => {
                     className="text-blue-400 hover:underline"
                     target={match[2].startsWith("http") ? "_blank" : "_self"}
                 >
-                    {match[1]}
+                    this link
                 </Link>
             );
             lastIndex = match.index + match[0].length;
