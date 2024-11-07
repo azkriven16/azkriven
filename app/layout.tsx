@@ -26,13 +26,13 @@ export const metadata: Metadata = {
         title: `${SITE_CONFIG.firstName}'s Portfolio - Software Engineer`,
         description: SITE_CONFIG.description,
         url: baseURL,
-        images: "https://azkriven.vercel.app/api/og",
+        images: "https://azkriven.vercel.app/screenshot-desktop.png",
     },
     twitter: {
         card: "summary_large_image",
         title: `${SITE_CONFIG.firstName}'s Portfolio - Software Engineer`,
         description: SITE_CONFIG.description,
-        images: ["https://azkriven.vercel.app/api/og"],
+        images: "https://azkriven.vercel.app/screenshot-desktop.png",
     },
 };
 
