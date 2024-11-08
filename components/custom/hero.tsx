@@ -29,11 +29,9 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.15, duration: 0.2 }}
-                        className="text-4xl md:text-6xl font-bold"
+                        className="text-4xl md:text-6xl font-semibold"
                     >
                         Unleashing creative <br /> potential on the web!
-                        <br />
-                        {`with </code>`}
                     </motion.h1>
                     <motion.div
                         initial={{ scale: 0.9 }}
@@ -55,8 +53,12 @@ export const Hero = () => {
                         transition={{ delay: 0.25, duration: 0.2 }}
                         className="text-xl text-muted-foreground"
                     >
-                        Hi, I'm Euger (azkriven) - a software engineer crafting
-                        web experiences since 2020.
+                        Hi, I'm{" "}
+                        <span className="text-foreground">
+                            Euger (azkriven)
+                        </span>
+                        - a software engineer crafting web experiences since
+                        2020.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
