@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useChat } from "ai/react";
 import { Button } from "@/components/ui/button";
-import { IconMessage, IconSend } from "@tabler/icons-react";
+import { IconMessage, IconSend, IconX } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -60,11 +60,15 @@ export const AIChatbot = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 className="fixed bottom-4 right-4 md:bottom-6 md:right-6 rounded-full bg-white hover:bg-gray-100 w-14 h-14 md:w-16 md:h-16"
             >
-                <IconMessage
-                    size={24}
-                    className="md:w-8 md:h-8"
-                    color="black"
-                />
+                {isOpen ? (
+                    <IconX size={24} className="md:w-8 md:h-8" color="black" />
+                ) : (
+                    <IconMessage
+                        size={24}
+                        className="md:w-8 md:h-8"
+                        color="black"
+                    />
+                )}
             </Button>
 
             <AnimatePresence>
@@ -73,9 +77,15 @@ export const AIChatbot = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 20 }}
-                        className="fixed bottom-16 right-4 md:bottom-20 md:right-6 w-[80vw] md:w-[300px] h-[50vh] md:h-[400px] bg-zinc-900 border-zinc-800 border rounded-lg shadow-xl flex flex-col"
+                        className="fixed right-4 bottom-20 md:bottom-24 md:right-6 w-[80vw] md:w-[300px] h-[50vh] md:h-[400px] bg-zinc-900 border-zinc-800 border rounded-lg shadow-xl flex flex-col"
                     >
                         <div className="flex-1 p-3 md:p-4 overflow-y-auto">
+                            <div
+                                className={`mb-4 p-2 md:p-3 rounded-lg bg-zinc-800 text-zinc-200 max-w-[80%] whitespace-pre-wrap text-sm md:text-base`}
+                            >
+                                Please ask only about my portfolio to avoid
+                                confusion.
+                            </div>
                             <div
                                 className={`mb-4 p-2 md:p-3 rounded-lg bg-zinc-800 text-zinc-200 max-w-[80%] whitespace-pre-wrap text-sm md:text-base`}
                             >

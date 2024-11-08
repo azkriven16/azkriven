@@ -16,7 +16,6 @@ export const metadata: Metadata = {
         "Euger Bonete portfolio",
         "Euger Bonete web developer",
         "Euger Bonete software engineer",
-        "Euger Bonete web developer",
         "Euger Bonete portfolio website",
         "Euger Bonete nisu",
         "Euger Bonete cics",
