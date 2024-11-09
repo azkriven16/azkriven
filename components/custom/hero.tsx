@@ -16,7 +16,13 @@ import { SITE_CONFIG } from "@/config/site";
 export const Hero = () => {
     return (
         <>
-            <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+            <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 100 }}
+                transition={{ duration: 1 }}
+                className="absolute bottom-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+            ></motion.div>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -57,8 +63,8 @@ export const Hero = () => {
                         <span className="text-foreground">
                             Euger (azkriven)
                         </span>
-                        - a software engineer crafting web experiences since
-                        2020.
+                        - software engineer crafting digital solutions since
+                        2021.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

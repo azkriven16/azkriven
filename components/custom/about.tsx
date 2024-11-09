@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { CERTS } from "@/config/certs";
 import { EDUCATION } from "@/config/education";
-import { IconCode } from "@tabler/icons-react";
+import { IconDownload } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -91,8 +91,8 @@ export const About = () => {
                             >
                                 <Button asChild>
                                     <Link href="/techstack">
-                                        <IconCode className="mr-2 h-4 w-4" />{" "}
-                                        View My Tech Stack
+                                        <IconDownload className="mr-2 h-4 w-4" />{" "}
+                                        Download CV
                                     </Link>
                                 </Button>
                             </motion.div>

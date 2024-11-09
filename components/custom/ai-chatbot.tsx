@@ -81,12 +81,6 @@ export const AIChatbot = () => {
                     >
                         <div className="flex-1 p-3 md:p-4 overflow-y-auto">
                             <div
-                                className={`mb-4 p-2 md:p-3 rounded-lg bg-yellow-400 text-black max-w-[80%] whitespace-pre-wrap text-sm md:text-base`}
-                            >
-                                This AI will answer questions related to me, my
-                                work, projects, and more.
-                            </div>
-                            <div
                                 className={`mb-4 p-2 md:p-3 rounded-lg bg-zinc-800 text-zinc-200 max-w-[80%] whitespace-pre-wrap text-sm md:text-base`}
                             >
                                 Hi! I'm Euger's portfolio AI assistant. What
