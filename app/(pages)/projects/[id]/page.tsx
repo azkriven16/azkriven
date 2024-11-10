@@ -32,7 +32,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
                                 alt={`${project.title} Desktop View`}
                                 width={512}
                                 height={278}
-                                className="h-[156px] md:h-[278px] w-full rounded-lg object-cover"
+                                className="h-[156px] md:h-[278px] w-full rounded-lg object-contain"
                             />
                         </div>
                     </div>
@@ -53,7 +53,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
                             alt={`${project.title} Mobile View`}
                             width={272}
                             height={572}
-                            className="w-[172px] h-[372px] md:w-[272px] md:h-[572px] object-cover"
+                            className="w-[172px] h-[372px] md:w-[272px] md:h-[572px] object-contain"
                         />
                     </div>
                 </div>

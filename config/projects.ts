@@ -25,7 +25,7 @@ export const PROJECTS = [
         slug: "euger-portfolio",
         href: "https://azkriven.vercel.app/",
         img: "/screenshot-desktop.png",
-        img_mobile: "screenshot-mobile.png",
+        img_mobile: "/screenshot-mobile.png",
         source: "https://github.com/azkriven16/azkriven",
         category: "frontend",
         description:
