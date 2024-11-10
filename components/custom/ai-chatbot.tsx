@@ -19,7 +19,7 @@ export const AIChatbot = () => {
 
     useEffect(() => {
         scrollToBottom();
-    }, [messages]);
+    }, [messages, isLoading]);
 
     const renderMessageContent = (content: string) => {
         // Regular expression to match markdown-style links [text](url)
@@ -83,8 +83,9 @@ export const AIChatbot = () => {
                             <div
                                 className={`mb-4 p-2 md:p-3 rounded-lg bg-zinc-800 text-zinc-200 max-w-[80%] whitespace-pre-wrap text-sm md:text-base`}
                             >
-                                Hi! I'm Euger's portfolio AI assistant. What
-                                would you like to know?
+                                You can ask the chatbot any question about me
+                                and it will find the relevant information on
+                                this website.
                             </div>
                             {messages.map((message, index) => (
                                 <div
@@ -98,9 +99,13 @@ export const AIChatbot = () => {
                                     {renderMessageContent(message.content)}
                                 </div>
                             ))}
+                            {isLoading && (
+                                <div className="mb-4 p-2 md:p-3 rounded-lg bg-zinc-800 text-zinc-200 max-w-[80%] whitespace-pre-wrap text-sm md:text-base">
+                                    Thinking...
+                                </div>
+                            )}
                             <div ref={messagesEndRef} />
                         </div>
-
                         <form
                             onSubmit={handleSubmit}
                             className="border-t border-zinc-800 p-3 md:p-4 bg-zinc-900"
