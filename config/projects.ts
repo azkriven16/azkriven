@@ -21,13 +21,14 @@ export const PROJECTS = [
         description: "task management solution, organize your daily tasks.",
     },
     {
-        title: "Stream and watch anime",
-        slug: "stream-and-watch-anime",
-        href: "https://what-the-blog.vercel.app/",
-        img: "/projects/what-the-blog-light.png",
-        img_mobile: "/projects/nisuboard-mobile.png",
-        source: "https://github.com/EugerBonete/what-the-blog",
+        title: "Euger's Portfolio",
+        slug: "euger-portfolio",
+        href: "https://azkriven.vercel.app/",
+        img: "/screenshot-desktop.png",
+        img_mobile: "screenshot-mobile.png",
+        source: "https://github.com/azkriven16/azkriven",
         category: "frontend",
-        description: "my blog website using mdx",
+        description:
+            "A sleek portfolio built with Next.js, Tailwind CSS, and Framer Motion, featuring an AI-powered chatbot integrated with Vercel AI and Gemini AI. Engage with interactive content and explore projects through an intuitive, AI-driven experience.",
     },
 ];

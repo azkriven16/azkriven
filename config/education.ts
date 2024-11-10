@@ -1,6 +1,6 @@
 export const EDUCATION = [
     {
-        degree: "Bachelor of Science in Computer Science",
+        degree: "Bachelor of Science in Information Technology",
         school: "Northern Iloilo State University",
         year: "2025",
         description:

@@ -9,7 +9,7 @@ export const EXP = [
             "Participated in agile ceremonies and utilized project management tools for task tracking",
         ],
         href: "https://www.digipay.ph/",
-        technologies: ["React", "TypeScript", "Tailwind CSS", "Jira"],
+        technologies: ["React", "Sass", "Bootstrap"],
     },
     {
         company: "Synesthesia",
@@ -21,7 +21,7 @@ export const EXP = [
             "Customized Bubble.io components and workflows to match design specifications",
         ],
         // href: "#",
-        technologies: ["Bubble.io", "Figma", "HTML", "CSS"],
+        technologies: ["Bubble.io", "Figma", "HTML", "CSS", "Javascript"],
     },
     {
         company: "Rocketshyft",
