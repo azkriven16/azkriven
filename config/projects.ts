@@ -29,6 +29,6 @@ export const PROJECTS = [
         source: "https://github.com/azkriven16/azkriven",
         category: "frontend",
         description:
-            "A sleek portfolio built with Next.js, Tailwind CSS, and Framer Motion, featuring an AI-powered chatbot integrated with Vercel AI and Gemini AI. Engage with interactive content and explore projects through an intuitive, AI-driven experience.",
+            "A sleek portfolio built with Nextjs, Tailwind CSS, and Framer Motion, featuring an AI-powered chatbot integrated with Vercel AI and Gemini AI. Engage with interactive content and explore projects through an intuitive, AI-driven experience.",
     },
 ];
