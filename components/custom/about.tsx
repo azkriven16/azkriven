@@ -90,9 +90,13 @@ export const About = () => {
                                 transition={{ delay: 0.35, duration: 0.2 }}
                             >
                                 <Button asChild>
-                                    <Link href="/techstack">
-                                        <IconDownload className="mr-2 h-4 w-4" />{" "}
-                                        Download CV
+                                    <Link
+                                        href="/euger-resume.pdf"
+                                        target="_blank"
+                                        download="euger-resume.pdf"
+                                    >
+                                        <IconDownload className="mr-2 h-4 w-4" />
+                                        Download Resume
                                     </Link>
                                 </Button>
                             </motion.div>
