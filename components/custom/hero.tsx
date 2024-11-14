@@ -1,17 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-    IconBrandFacebook,
-    IconBrandGithub,
-    IconBrandLinkedin,
-    IconChevronRight,
-    IconMail,
-    IconMapPin,
-} from "@tabler/icons-react";
-import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { SITE_CONFIG } from "@/config/site";
+import { IconChevronRight, IconMapPin } from "@tabler/icons-react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const Hero = () => {
     return (
@@ -50,7 +43,7 @@ export const Hero = () => {
                                 <motion.path
                                     d="M0,5 C100,0 150,10 200,5 C250,0 300,10 400,5" // Squiggly line path
                                     stroke="currentColor" // Use the current text color for the line
-                                    strokeWidth="2"
+                                    strokeWidth="4"
                                     initial={{
                                         pathLength: 0,
                                         strokeDasharray: 400, // Length of the path
