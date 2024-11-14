@@ -35,10 +35,52 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.15, duration: 0.2 }}
-                        className="text-4xl md:text-6xl font-semibold"
+                        className="text-4xl md:text-6xl font-bold"
                     >
-                        Unleashing creative <br /> potential on the web!
+                        Hi. I'm {SITE_CONFIG.name}
+                        <br />A{" "}
+                        <span className="relative inline-block">
+                            web developer
+                            <motion.svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="absolute top-16 left-0 w-full h-[8px]"
+                                viewBox="0 0 400 10" // Adjust the viewbox size based on your design
+                                fill="none"
+                            >
+                                <motion.path
+                                    d="M0,5 C100,0 150,10 200,5 C250,0 300,10 400,5" // Squiggly line path
+                                    stroke="currentColor" // Use the current text color for the line
+                                    strokeWidth="2"
+                                    initial={{
+                                        pathLength: 0,
+                                        strokeDasharray: 400, // Length of the path
+                                        strokeDashoffset: 400, // Initially hide the stroke
+                                    }}
+                                    animate={{
+                                        pathLength: 1, // Reveal the full path
+                                        strokeDashoffset: 0, // Animate from hidden to visible
+                                    }}
+                                    transition={{
+                                        duration: 1, // Duration of the animation
+                                        ease: "easeInOut", // Smooth easing
+                                        delay: 0.5, // Delay before starting the animation
+                                    }}
+                                />
+                            </motion.svg>
+                        </span>
                     </motion.h1>
+
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.25, duration: 0.2 }}
+                        className="text-xl text-muted-foreground pt-5"
+                    >
+                        Designing and developing interactive, visually
+                        captivating websites that focus on usability,
+                        performance, and overall user satisfaction since 2021.
+                    </motion.p>
+
                     <motion.div
                         initial={{ scale: 0.9 }}
                         animate={{ scale: 1 }}
@@ -46,31 +88,20 @@ export const Hero = () => {
                         className="flex justify-center"
                     >
                         <a
-                            className="inline-flex items-center gap-x-2 border-2 text-sm p-1 ps-3 rounded-full transition"
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-background px-3 py-1 text-sm font-medium text-foreground shadow-sm shadow-black/[.12] dark:bg-accent"
                             href="#"
                         >
+                            <span className="mr-2 flex shrink-0 border-r border-white pr-2">
+                                <IconMapPin />
+                            </span>
                             {SITE_CONFIG.address}
-                            <IconMapPin />
                         </a>
                     </motion.div>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.25, duration: 0.2 }}
-                        className="text-xl text-muted-foreground"
-                    >
-                        Hi, I'm{" "}
-                        <span className="text-foreground">
-                            Euger (azkriven)
-                        </span>
-                        - software engineer crafting digital solutions since
-                        2021.
-                    </motion.p>
+
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.2 }}
-                        className="flex justify-center space-x-4"
                     >
                         <Button asChild variant="shine">
                             <Link
@@ -79,57 +110,6 @@ export const Hero = () => {
                             >
                                 See my work
                                 <IconChevronRight className="ml-2" size={18} />
-                            </Link>
-                        </Button>
-
-                        <Button asChild variant="secondary">
-                            <Link href="/about">About Me</Link>
-                        </Button>
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.35, duration: 0.2 }}
-                        className="flex justify-center space-x-4 mt-4"
-                    >
-                        <Button asChild variant="ghost" size="icon">
-                            <Link
-                                href={SITE_CONFIG.socials.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <IconBrandGithub size={24} />
-                                <span className="sr-only">GitHub</span>
-                            </Link>
-                        </Button>
-                        <Button asChild variant="ghost" size="icon">
-                            <Link
-                                href={SITE_CONFIG.socials.linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <IconBrandLinkedin size={24} />
-                                <span className="sr-only">LinkedIn</span>
-                            </Link>
-                        </Button>
-                        <Button asChild variant="ghost" size="icon">
-                            <Link
-                                href={SITE_CONFIG.socials.facebook}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <IconBrandFacebook size={24} />
-                                <span className="sr-only">Facebook</span>
-                            </Link>
-                        </Button>
-                        <Button asChild variant="ghost" size="icon">
-                            <Link
-                                href={`mailto:${SITE_CONFIG.socials.email}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <IconMail size={24} />
-                                <span className="sr-only">Email</span>
                             </Link>
                         </Button>
                     </motion.div>

@@ -166,7 +166,7 @@ export const About = () => {
                                                 <Link
                                                     href={item.href}
                                                     target="_blank"
-                                                    className="font-semibold hover:underline"
+                                                    className="font-semibold underline"
                                                 >
                                                     {item.text}
                                                 </Link>

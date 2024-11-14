@@ -46,7 +46,7 @@ export const Experience = () => {
                         >
                             <Link
                                 href={item.href || "#"}
-                                className="text-2xl font-bold hover:underline block mb-2"
+                                className="text-2xl font-bold underline block mb-2"
                                 target={item.href ? "_blank" : "_self"}
                             >
                                 {item.company}
