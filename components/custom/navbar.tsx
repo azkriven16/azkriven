@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -10,12 +11,19 @@ import {
     IconMail,
     IconPicnicTable,
 } from "@tabler/icons-react";
-import { Drawer } from "@/components/ui/drawer";
-import { DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { SITE_CONFIG } from "@/config/site";
 import { cn } from "@/lib/utils";
+import path from "path";
+
+// Define navigation items constant
+const NAV_ITEMS = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/projects" },
+    { label: "Work", href: "/about" },
+    { label: "Contact", href: "/contact" },
+];
 
 export const Navbar = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -61,99 +69,52 @@ export const Navbar = () => {
                 >
                     <Link
                         href="/"
-                        className={`flex items-center ${
+                        className={`flex items-center text-2xl font-mono ${
                             pathname === "/" ? "text-primary" : ""
                         }`}
                     >
-                        <IconPicnicTable />
-                        zkriven
+                        <IconPicnicTable className="h-10 w-10" />
                     </Link>
                 </motion.div>
                 <div className="hidden md:flex space-x-2">
-                    {[
-                        "Home",
-                        "About",
-                        "Experience",
-                        "Projects",
-                        "Tech Stack",
-                    ].map((item, i) => {
-                        const href =
-                            item === "Home"
-                                ? "/"
-                                : `/${item.toLowerCase().replace(" ", "")}`;
-                        return (
-                            <motion.div
-                                key={item}
-                                variants={linkVariants}
-                                whileHover="hover"
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.05, duration: 0.1 }}
+                    {NAV_ITEMS.map((item, i) => (
+                        <motion.div
+                            key={item.label}
+                            variants={linkVariants}
+                            whileHover="hover"
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.05, duration: 0.1 }}
+                        >
+                            <Button
+                                asChild
+                                variant={
+                                    item.href === "/contact"
+                                        ? "gooeyLeft"
+                                        : "linkHover2"
+                                }
+                                onClick={handleLinkClick}
+                                className="rounded-full"
                             >
-                                <Button asChild variant="linkHover2">
-                                    <Link
-                                        href={href}
-                                        className={cn(
-                                            pathname === href
-                                                ? "text-primary"
-                                                : "text-muted-foreground",
-                                            "text-sm hover:text-primary"
-                                        )}
-                                    >
-                                        {item}
-                                    </Link>
-                                </Button>
-                            </motion.div>
-                        );
-                    })}
+                                <Link
+                                    href={item.href}
+                                    className={cn(
+                                        pathname === item.href
+                                            ? "text-primary"
+                                            : "text-muted-foreground",
+                                        item.href !== "/contact" &&
+                                            "hover:text-primary",
+
+                                        "text-base"
+                                    )}
+                                >
+                                    {item.label}
+                                </Link>
+                            </Button>
+                        </motion.div>
+                    ))}
                 </div>
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.35, duration: 0.2 }}
-                    className="hidden md:flex space-x-2"
-                >
-                    <Button asChild variant="ghost" size="icon">
-                        <Link
-                            href={SITE_CONFIG.socials.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <IconBrandGithub size={18} />
-                            <span className="sr-only">GitHub</span>
-                        </Link>
-                    </Button>
-                    <Button asChild variant="ghost" size="icon">
-                        <Link
-                            href={SITE_CONFIG.socials.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <IconBrandLinkedin size={18} />
-                            <span className="sr-only">LinkedIn</span>
-                        </Link>
-                    </Button>
-                    <Button asChild variant="ghost" size="icon">
-                        <Link
-                            href={SITE_CONFIG.socials.facebook}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <IconBrandFacebook size={18} />
-                            <span className="sr-only">Facebook</span>
-                        </Link>
-                    </Button>
-                    <Button asChild variant="ghost" size="icon">
-                        <Link
-                            href={SITE_CONFIG.socials.email}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <IconMail size={18} />
-                            <span className="sr-only">Email</span>
-                        </Link>
-                    </Button>
-                </motion.div>
+
                 <div className="md:hidden">
                     <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
                         <DrawerTrigger asChild>
@@ -195,108 +156,45 @@ export const Navbar = () => {
                                         </motion.div>
                                     </div>
                                     <div className="space-y-4">
-                                        {[
-                                            "Home",
-                                            "About",
-                                            "Experience",
-                                            "Projects",
-                                            "Tech Stack",
-                                        ].map((item, i) => {
-                                            const href =
-                                                item === "Home"
-                                                    ? "/"
-                                                    : `/${item
-                                                          .toLowerCase()
-                                                          .replace(" ", "")}`;
-                                            return (
-                                                <motion.div
-                                                    key={item}
-                                                    initial={{
-                                                        opacity: 0,
-                                                        x: -20,
-                                                    }}
-                                                    animate={{
-                                                        opacity: 1,
-                                                        x: 0,
-                                                    }}
-                                                    transition={{
-                                                        delay: i * 0.05,
-                                                        duration: 0.1,
-                                                    }}
-                                                >
-                                                    <Button
-                                                        asChild
-                                                        variant="ghost"
-                                                        className="w-full justify-start text-lg"
-                                                    >
-                                                        <Link
-                                                            href={href}
-                                                            onClick={
-                                                                handleLinkClick
-                                                            }
-                                                            className={
-                                                                pathname ===
-                                                                href
-                                                                    ? "text-primary"
-                                                                    : ""
-                                                            }
-                                                        >
-                                                            {item}
-                                                        </Link>
-                                                    </Button>
-                                                </motion.div>
-                                            );
-                                        })}
-                                    </div>
-                                    <motion.div
-                                        className="flex justify-center space-x-4 mt-6"
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{
-                                            delay: 0.2,
-                                            duration: 0.1,
-                                        }}
-                                    >
-                                        {[
-                                            {
-                                                icon: IconBrandGithub,
-                                                href: SITE_CONFIG.socials
-                                                    .github,
-                                            },
-                                            {
-                                                icon: IconBrandLinkedin,
-                                                href: SITE_CONFIG.socials
-                                                    .linkedin,
-                                            },
-                                            {
-                                                icon: IconBrandFacebook,
-                                                href: SITE_CONFIG.socials
-                                                    .facebook,
-                                            },
-                                            {
-                                                icon: IconMail,
-                                                href: `mailto:${SITE_CONFIG.socials.email}`,
-                                            },
-                                        ].map((social, i) => (
+                                        {NAV_ITEMS.map((item, i) => (
                                             <motion.div
-                                                key={social.href}
-                                                whileHover={{
-                                                    scale: 1.2,
-                                                    rotate: 180,
+                                                key={item.label}
+                                                initial={{
+                                                    opacity: 0,
+                                                    x: -20,
                                                 }}
-                                                transition={{ duration: 0.15 }}
+                                                animate={{
+                                                    opacity: 1,
+                                                    x: 0,
+                                                }}
+                                                transition={{
+                                                    delay: i * 0.05,
+                                                    duration: 0.1,
+                                                }}
                                             >
-                                                <Link
-                                                    href={social.href}
-                                                    onClick={handleLinkClick}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
+                                                <Button
+                                                    asChild
+                                                    variant="ghost"
+                                                    className="w-full justify-start text-lg"
                                                 >
-                                                    <social.icon className="w-6 h-6" />
-                                                </Link>
+                                                    <Link
+                                                        href={item.href}
+                                                        onClick={
+                                                            handleLinkClick
+                                                        }
+                                                        className={
+                                                            pathname ===
+                                                            item.href
+                                                                ? "text-primary"
+                                                                : ""
+                                                        }
+                                                    >
+                                                        {item.label}
+                                                    </Link>
+                                                </Button>
                                             </motion.div>
                                         ))}
-                                    </motion.div>
+                                    </div>
                                 </motion.div>
                             </AnimatePresence>
                         </DrawerContent>

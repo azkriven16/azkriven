@@ -17,10 +17,10 @@ export default function Home() {
     }, []);
 
     return (
-        <main>
+        <main className="space-y-32 py-20">
             <Hero />
-            <Experience />
             <Projects />
+            <Experience />
             <TechStack />
             <About />
         </main>

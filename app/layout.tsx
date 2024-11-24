@@ -8,7 +8,8 @@ import { AIChatbot } from "@/components/custom/ai-chatbot";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    title: `${SITE_CONFIG.firstName}'s Portfolio`,
+    title: `${SITE_CONFIG.name}'s Portfolio ⁠- NISU | CICS`,
+
     description: SITE_CONFIG.description,
     metadataBase: new URL(`${baseURL}`),
     keywords: [

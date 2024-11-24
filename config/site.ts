@@ -2,25 +2,6 @@ import { BookMarked, Grid2X2, Home, UserCircle } from "lucide-react";
 
 export const baseURL = "https://azkriven.vercel.app/";
 
-export const NAV_ITEMS = [
-    { text: "Home", href: "/", icon: Home },
-    {
-        text: "About",
-        href: "/about",
-        icon: UserCircle,
-    },
-    {
-        text: "Work",
-        href: "/work",
-        icon: Grid2X2,
-    },
-    {
-        text: "Blog",
-        href: "/blog",
-        icon: BookMarked,
-    },
-];
-
 export const BLOG = [
     {
         title: "Getting Started with Web Development",
