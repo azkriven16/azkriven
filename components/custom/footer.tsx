@@ -1,3 +1,4 @@
+"use client";
 import {
     IconBrandNextjs,
     IconBrandTailwind,
@@ -8,118 +9,62 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/config/site";
+import { Section } from "./section";
+import { Button, buttonVariants } from "../ui/button";
+import { cn } from "@/lib/utils";
 
 export const Footer = () => {
     return (
-        <footer className="py-8 md:py-12 mt-10">
-            <div className="max-w-6xl mx-auto px-4">
-                <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row items-center justify-between">
-                    <div className="flex flex-col items-center md:items-start space-y-4">
-                        <p className="text-sm text-muted-foreground text-center md:text-left">
-                            &copy; {new Date().getFullYear()} Euger Portfolio.
-                            All rights reserved.
+        <Section>
+            <footer className="py-20 space-y-20">
+                <div className="flex flex-col md:flex-row gap-20 justify-between">
+                    <div className="space-y-10">
+                        <p className="text-2xl md:w-2/3">
+                            We specialize in crafting exceptional digital
+                            experiences to help our clients achieve their
+                            business goals.
                         </p>
-                        <nav>
-                            <ul className="flex flex-wrap justify-center md:justify-start space-x-4">
-                                <li>
-                                    <Link
-                                        href="/"
-                                        className="text-sm hover:text-primary"
-                                    >
-                                        Home
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/about"
-                                        className="text-sm hover:text-primary"
-                                    >
-                                        About
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/projects"
-                                        className="text-sm hover:text-primary"
-                                    >
-                                        Projects
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/experience"
-                                        className="text-sm hover:text-primary"
-                                    >
-                                        Experience
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/techstack"
-                                        className="text-sm hover:text-primary"
-                                    >
-                                        Tech Stack
-                                    </Link>
-                                </li>
-                            </ul>
-                        </nav>
+                        <Button className="rounded-full" size="lg">
+                            Contact Me
+                        </Button>
                     </div>
-                    <div className="flex flex-col items-center md:items-end space-y-4">
-                        <div className="flex items-center space-x-4">
-                            <a
-                                href={SITE_CONFIG.socials.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center space-x-2 hover:text-primary"
-                            >
-                                <IconBrandGithub className="w-5 h-5" />
-                                <span className="text-sm">GitHub</span>
-                            </a>
-                            <a
-                                href={SITE_CONFIG.socials.linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center space-x-2 hover:text-primary"
-                            >
-                                <IconBrandLinkedin className="w-5 h-5" />
-                                <span className="text-sm">LinkedIn</span>
-                            </a>
-                            <a
-                                href={SITE_CONFIG.socials.facebook}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center space-x-2 hover:text-primary"
-                            >
-                                <IconBrandTwitter className="w-5 h-5" />
-                                <span className="text-sm">Facebook</span>
-                            </a>
+                    <div className="flex  gap-20">
+                        <div className="flex flex-col">
+                            <span className="text-sm uppercase mb-5">
+                                navigation
+                            </span>
+                            <Navlink href="/" text="Home" />
+                            <Navlink href="/" text="About" />
+                            <Navlink href="/" text="Work" />
                         </div>
-                        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                            <p className="text-sm text-muted-foreground">
-                                Built with
-                            </p>
-                            <div className="flex flex-wrap justify-center sm:justify-start items-center gap-2 sm:gap-4">
-                                <div className="flex items-center space-x-2">
-                                    <IconBrandNextjs className="w-5 h-5" />
-                                    <span className="text-sm">Next.js</span>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <IconBrandTailwind className="w-5 h-5" />
-                                    <span className="text-sm">
-                                        Tailwind CSS
-                                    </span>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <IconBrandFramer className="w-5 h-5" />
-                                    <span className="text-sm">
-                                        Framer Motion
-                                    </span>
-                                </div>
-                            </div>
+                        <div className="flex flex-col">
+                            <span className="text-sm uppercase mb-5">
+                                socials
+                            </span>
+                            <Navlink href="/" text="Facebook" />
+                            <Navlink href="/" text="Gmail" />
+                            <Navlink href="/" text="Github" />
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+                <p className="text-sm text-muted-foreground">
+                    Framer template crafted with love by Dawid Pietrasiak
+                </p>
+            </footer>
+        </Section>
     );
 };
+
+function Navlink({ href, text }: { href: string; text: string }) {
+    return (
+        <Link
+            href={href}
+            className={cn(
+                buttonVariants({ variant: "linkHover2" }),
+                "text-base justify-start p-0"
+            )}
+        >
+            {text}
+        </Link>
+    );
+}
