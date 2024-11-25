@@ -42,7 +42,7 @@ export const Projects = () => {
                                     src={item.img}
                                     alt={`${item.title} Image`}
                                     fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                                    className="object-contain group-hover:scale-110 transition-transform duration-300"
                                 />
                             </div>
                         </motion.div>

@@ -12,7 +12,7 @@ export const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.25, duration: 0.2 }}
-                    className="text-2xl md:w-2/4 leading-normal"
+                    className="text-xl md:text-2xl md:w-2/4 leading-normal"
                 >
                     I specialize in crafting exceptional digital experiences
                     using code to help clients achieve their business goals.
@@ -23,9 +23,9 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.15, duration: 0.2 }}
-                        className="text-4xl md:text-8xl font-semibold"
+                        className="text-4xl md:text-8xl font-dm"
                     >
-                        React Web Developer
+                        Fullstack Web Developer
                     </motion.h1>
                     <div>
                         <p>{SITE_CONFIG.socials.email}</p>
