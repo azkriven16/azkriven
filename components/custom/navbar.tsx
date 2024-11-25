@@ -1,23 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import {
-    IconMenu2,
-    IconBrandGithub,
-    IconBrandLinkedin,
-    IconBrandFacebook,
-    IconMail,
-    IconPicnicTable,
-} from "@tabler/icons-react";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import { motion, AnimatePresence } from "framer-motion";
-import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import path from "path";
+import { IconMenu2, IconPicnicTable } from "@tabler/icons-react";
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
-// Define navigation items constant
 const NAV_ITEMS = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
@@ -27,7 +18,17 @@ const NAV_ITEMS = [
 
 export const Navbar = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const pathname = usePathname();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const navVariants = {
         hidden: { y: -100, opacity: 0 },
@@ -59,7 +60,10 @@ export const Navbar = () => {
             initial="hidden"
             animate="visible"
             variants={navVariants}
-            className="py-4 backdrop-blur-md bg-black/80 fixed top-0 left-0 right-0 z-50 shadow-sm"
+            className={cn(
+                "py-4 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm",
+                isScrolled ? "bg-secondary/50" : "bg-transparent"
+            )}
         >
             <div className="max-w-6xl px-4 mx-auto flex justify-between items-center">
                 <motion.div
@@ -123,7 +127,7 @@ export const Navbar = () => {
                                 whileTap={{ scale: 0.9 }}
                                 transition={{ duration: 0.1 }}
                             >
-                                <IconMenu2 className="cursor-pointer" />
+                                <IconMenu2 className="cursor-pointer h-8 w-8" />
                             </motion.div>
                         </DrawerTrigger>
                         <DrawerContent>

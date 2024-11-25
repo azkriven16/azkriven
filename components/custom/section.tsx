@@ -12,7 +12,7 @@ export const Section = ({ children }: PropsWithChildren) => {
             transition={{
                 ease: "easeInOut",
             }}
-            className="max-w-6xl mx-auto px-4"
+            className="max-w-6xl mx-auto"
         >
             {children}
         </motion.div>

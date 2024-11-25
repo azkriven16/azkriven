@@ -55,7 +55,7 @@ export default function RootLayout({
             <body
                 className={cn(
                     "antialiased font-poppins mt-20 md:mt-10",
-                    "bg-zinc-950 text-zinc-100"
+                    "bg-zinc-950 text-zinc-100 m-4 relative"
                 )}
             >
                 <Navbar />
