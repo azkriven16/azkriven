@@ -7,12 +7,12 @@ import { Section } from "./section";
 export const Hero = () => {
     return (
         <Section>
-            <div className="md:pt-20 space-y-10">
+            <div className="py-10 md:pt-20 space-y-10">
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.25, duration: 0.2 }}
-                    className="text-xl md:text-2xl md:w-2/4 leading-normal"
+                    className="text-xl md:text-2xl w-[90%] md:w-2/4 leading-normal"
                 >
                     I specialize in crafting exceptional digital experiences
                     using code to help clients achieve their business goals.

@@ -16,7 +16,7 @@ export default function ProjectsPage() {
                 <div className=" md:pt-20">
                     <div className="space-y-10 py-10 md:py-20">
                         <h1 className="text-5xl md:text-8xl font-dm">Work</h1>
-                        <p className="text-xl md:text-2xl md:w-2/3 leading-normal">
+                        <p className="text-2xl md:w-2/3 leading-normal">
                             I don't just create websites; we craft unforgettable
                             experiences that leave a lasting impression.
                         </p>

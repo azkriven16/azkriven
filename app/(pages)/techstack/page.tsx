@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function TechStackPage() {
     return (
-        <main>
+        <div>
             <TechStack />
-        </main>
+        </div>
     );
 }
