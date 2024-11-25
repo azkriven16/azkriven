@@ -1,28 +1,18 @@
 "use client";
-import {
-    IconBrandNextjs,
-    IconBrandTailwind,
-    IconBrandFramer,
-    IconBrandGithub,
-    IconBrandLinkedin,
-    IconBrandTwitter,
-} from "@tabler/icons-react";
-import Link from "next/link";
-import { SITE_CONFIG } from "@/config/site";
-import { Section } from "./section";
-import { Button, buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { Button, buttonVariants } from "../ui/button";
+import { Section } from "./section";
 
 export const Footer = () => {
     return (
         <Section>
-            <footer className="py-20 space-y-20">
+            <footer className="py-20 space-y-20 md:mt-20">
                 <div className="flex flex-col md:flex-row gap-20 justify-between">
                     <div className="space-y-10">
                         <p className="text-2xl md:w-2/3">
-                            We specialize in crafting exceptional digital
-                            experiences to help our clients achieve their
-                            business goals.
+                            Let&apos;s build fast, scalable, and user-friendly
+                            websites together.
                         </p>
                         <Button className="rounded-full" size="lg">
                             Contact Me
@@ -48,7 +38,7 @@ export const Footer = () => {
                     </div>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                    Framer template crafted with love by Dawid Pietrasiak
+                    Built by Euger Bonete
                 </p>
             </footer>
         </Section>

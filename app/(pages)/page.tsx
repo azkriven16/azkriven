@@ -20,18 +20,22 @@ export default function Home() {
     return (
         <main className="space-y-10 md:space-y-40 py-10 md:py-20">
             <Hero />
-            <Projects />
+            <div className="space-y-10">
+                <Experience />
+                <Projects />
+            </div>
             <Section>
-                <p className="text-2xl leading-normal">
-                    We strive to bring innovation and creativity to every
-                    project we undertake. Our team of experts works closely with
-                    our clients to understand their needs and deliver
-                    outstanding solutions.
-                </p>
+                <div className="space-y-20">
+                    <p className="text-2xl md:text-3xl leading-normal">
+                        I strive to bring innovation and creativity to every
+                        project we undertake. Our team of experts works closely
+                        with our clients to understand their needs and deliver
+                        outstanding solutions. We are dedicated to creating
+                        products that exceed our clients' expectations.
+                    </p>
+                    <TechStack />
+                </div>
             </Section>
-            {/* <Experience /> */}
-            <TechStack />
-            {/* <About /> */}
         </main>
     );
 }

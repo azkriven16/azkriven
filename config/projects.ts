@@ -11,8 +11,8 @@ export const PROJECTS = [
             "Nisuboard is a boarding house mapping application that helps users find and explore available boarding houses in their area. Built with Next.js, Prisma, and TypeScript, it features user authentication via Clerk, and a responsive UI using Radix UI components and Tailwind CSS.",
     },
     {
-        title: "Nisuboard",
-        slug: "nisuboard",
+        title: "Nisuboard2",
+        slug: "nisuboard2",
         href: "https://nisuboard-final.vercel.app/",
         img: "/projects/nisuboard.png",
         img_mobile: "/projects/nisuboard-mobile.png",

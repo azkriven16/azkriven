@@ -11,19 +11,19 @@ import { Section } from "./section";
 export const Projects = () => {
     return (
         <Section>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {PROJECTS.map((item, index) => (
                     <Link
                         href={`/projects/${item.slug}`}
                         key={item.href}
-                        className="h-full"
+                        className="flex flex-col gap-5 group"
                     >
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 + index * 0.05 }}
-                            className="flex flex-col h-full p-4 shadow-md border rounded-lg cursor-pointer hover:shadow-lg transition-shadow group relative"
+                            className="flex flex-col h-full p-4 shadow-md border rounded-lg cursor-pointer hover:shadow-lg transition-shadow relative bg-secondary"
                         >
                             <div className="absolute top-4 left-4 hidden group-hover:flex z-10">
                                 <Button size="icon" className="rounded-full">
@@ -45,10 +45,11 @@ export const Projects = () => {
                                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                                 />
                             </div>
-                            <h3 className="text-xl font-semibold mb-2">
-                                {item.title}
-                            </h3>
                         </motion.div>
+                        <div className="flex gap-2">
+                            <p>{item.title}</p>
+                            <ArrowRight className="-rotate-45" />
+                        </div>
                     </Link>
                 ))}
             </div>

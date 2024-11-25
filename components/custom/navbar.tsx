@@ -20,8 +20,8 @@ import path from "path";
 // Define navigation items constant
 const NAV_ITEMS = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/projects" },
-    { label: "Work", href: "/about" },
+    { label: "About", href: "/about" },
+    { label: "Work", href: "/projects" },
     { label: "Contact", href: "/contact" },
 ];
 

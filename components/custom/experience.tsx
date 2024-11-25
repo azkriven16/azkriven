@@ -1,93 +1,60 @@
 "use client";
 
-import { EXP } from "@/config/exp";
-import Link from "next/link";
-import React from "react";
+import { PROJECTS } from "@/config/projects";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "../ui/button";
+import { Section } from "./section";
+import { EXP } from "@/config";
 
 export const Experience = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
-            className="py-16"
-        >
-            <div className="max-w-6xl mx-auto px-4">
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                    className="text-3xl md:text-4xl font-bold mb-8"
-                >
-                    My Professional Journey
-                </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.15 }}
-                    className="text-xl text-muted-foreground mb-12"
-                >
-                    Explore my tech-related work experience and achievements.
-                </motion.p>
-
-                <div className="space-y-12">
-                    {EXP.map((item, index) => (
+        <Section>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {EXP.map((item, index) => (
+                    <Link
+                        href={item.href}
+                        key={item.href}
+                        className="flex flex-col gap-5 group"
+                        target="_blank"
+                    >
                         <motion.div
-                            key={item.company}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 + index * 0.05 }}
-                            className="border-r"
+                            className="flex flex-col h-full p-4 shadow-md border rounded-lg cursor-pointer hover:shadow-lg transition-shadow relative bg-secondary"
                         >
-                            <Link
-                                href={item.href || "#"}
-                                className="text-2xl font-bold underline block mb-2"
-                                target={item.href ? "_blank" : "_self"}
-                            >
-                                {item.company}
-                            </Link>
-                            <p className="text-lg font-semibold text-primary mb-1">
-                                {item.role}
-                            </p>
-                            <p className="text-sm text-muted-foreground mb-4">
-                                {item.date}
-                            </p>
-                            <ul className="list-disc list-inside mb-4">
-                                {item.desc.map((description, descIndex) => (
-                                    <li
-                                        key={descIndex}
-                                        className="text-base text-muted-foreground mb-2"
+                            <div className="absolute top-4 left-4 hidden group-hover:flex z-10">
+                                <Button size="icon" className="rounded-full">
+                                    <motion.div
+                                        whileInView={{ rotate: -30 }}
+                                        transition={{
+                                            delay: 0.1,
+                                        }}
                                     >
-                                        {description}
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="mb-4">
-                                <h4 className="text-lg font-semibold mb-2">
-                                    Technologies:
-                                </h4>
-                                <div className="flex flex-wrap gap-2">
-                                    {item.technologies.map(
-                                        (tech, techIndex) => (
-                                            <span
-                                                key={techIndex}
-                                                className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-sm"
-                                            >
-                                                {tech}
-                                            </span>
-                                        )
-                                    )}
-                                </div>
+                                        <ArrowRight className="" />
+                                    </motion.div>
+                                </Button>
+                            </div>
+                            <div className="relative aspect-video w-full rounded-lg overflow-hidden mb-4">
+                                <Image
+                                    src={item.img}
+                                    alt={`${item.company} Image`}
+                                    fill
+                                    className="object-contain group-hover:scale-110 transition-transform duration-300"
+                                />
                             </div>
                         </motion.div>
-                    ))}
-                </div>
+                        <div className="flex gap-2">
+                            <p>{item.company}</p>
+                            <ArrowRight className="-rotate-45" />
+                        </div>
+                    </Link>
+                ))}
             </div>
-        </motion.div>
+        </Section>
     );
 };
