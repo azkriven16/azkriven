@@ -7,6 +7,10 @@ import { ArrowDown } from "lucide-react";
 import { FocusCardsDemo } from "./card-grid";
 import { LinkPreviewDemo } from "./link-preview";
 import { TimelineDemo } from "./timeline";
+import { LinkPreview } from "@/components/ui/link-preview";
+import { Button } from "@/components/ui/button";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import { MarqueeDemo } from "./marquee";
 
 export const HomeComponent = () => {
     return (
@@ -30,23 +34,31 @@ export const HomeComponent = () => {
                 <TextRevealByWord text="Today's websites become dull, lacking in quality, and fail to retain users' attention." />
             </div>
             <div className="flex items-center justify-center">
-                <TextRevealByWord text="But fear not! We are here to build amazing experiences for your users & make your brand stand out online." />
+                <TextRevealByWord text="But fear not! I am are here to build amazing experiences for your users & make your brand stand out online." />
             </div>
 
             <div className="flex items-center justify-center">
                 <VelocityScroll
-                    text="Welcome to my portfolio"
+                    text="Keep scrolling"
                     default_velocity={5}
                     className="font-display text-center text-4xl tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
                 />
             </div>
 
             <div className="flex items-center justify-center">
-                <TextRevealByWord text="Welcome to my portfolio, have a look around." />
+                <TextRevealByWord text="Dedicated to delivering designs and functionalities that not only engage users but also elevate your brand's online presence" />
             </div>
 
-            <div className="flex items-center justify-center max-w-4xl mx-auto">
-                <LinkPreviewDemo />
+            <div className="flex items-center justify-center h-[40rem]">
+                <VelocityScroll
+                    text="My Work Experience"
+                    default_velocity={5}
+                    className="font-display text-center text-4xl tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
+                />
+            </div>
+
+            <div className="flex items-center justify-center">
+                <TextRevealByWord text="Here are some of the companies I've worked with and my role in each one" />
             </div>
 
             <div className="flex items-center justify-center max-w-4xl mx-auto">
@@ -54,11 +66,23 @@ export const HomeComponent = () => {
             </div>
 
             <div className="flex items-center justify-center">
-                <TextRevealByWord text="Let's work together. Let me help you bring your ideas to reality." />
+                <TextRevealByWord text="Here are some of the projects I built in my free time and for my clients" />
             </div>
 
             <div className="flex items-center justify-center max-w-4xl mx-auto">
-                <LinkPreviewDemo />
+                <FocusCardsDemo />
+            </div>
+
+            <div className="flex items-center justify-center">
+                <TextRevealByWord text="What they say about me and my work delivering" />
+            </div>
+
+            <div className="flex items-center h-[200vh] justify-center max-w-4xl mx-auto">
+                <MarqueeDemo />
+            </div>
+
+            <div className="flex items-center justify-center">
+                <TextRevealByWord text="Let's work together. Let me help you bring your ideas to reality." />
             </div>
         </main>
     );

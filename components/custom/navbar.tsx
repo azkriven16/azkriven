@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 const NAV_ITEMS = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Work", href: "/work" },
+    // { label: "Work", href: "/work" },
     { label: "Contact", href: "/contact" },
 ];
 
@@ -62,7 +62,7 @@ export const Navbar = () => {
             variants={navVariants}
             className={cn(
                 "py-4 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm",
-                isScrolled ? "bg-secondary/50" : "bg-transparent"
+                isScrolled ? "" : "bg-transparent"
             )}
         >
             <div className="max-w-6xl px-4 mx-auto flex justify-between items-center">

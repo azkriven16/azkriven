@@ -18,14 +18,14 @@ export const Footer = () => {
                         </Button>
                     </div>
                     <div className="flex  gap-20">
-                        <div className="flex flex-col">
+                        {/* <div className="flex flex-col">
                             <span className="text-sm uppercase mb-5 pl-4">
                                 navigation
                             </span>
                             <Navlink href="/" text="Home" />
                             <Navlink href="/" text="About" />
                             <Navlink href="/" text="Work" />
-                        </div>
+                        </div> */}
                         <div className="flex flex-col">
                             <span className="text-sm uppercase mb-5 pl-4">
                                 socials
