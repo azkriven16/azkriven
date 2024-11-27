@@ -4,8 +4,6 @@ import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
 import TextRevealByWord from "@/components/ui/text-reveal";
 import WordPullUp from "@/components/ui/word-pull-up";
 import { ArrowDown } from "lucide-react";
-import { FocusCardsDemo } from "./card-grid";
-import { MarqueeDemo } from "./marquee";
 import { Certificates } from "./certificates";
 
 export const AboutComponent = () => {
