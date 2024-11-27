@@ -10,6 +10,7 @@ import { LinkPreview } from "@/components/ui/link-preview";
 import { Button } from "@/components/ui/button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { MarqueeDemo } from "./marquee";
+import { Experience } from "./experience";
 
 export const HomeComponent = () => {
     return (
@@ -61,7 +62,7 @@ export const HomeComponent = () => {
             </div>
 
             <div className="flex items-center justify-center max-w-4xl mx-auto">
-                <FocusCardsDemo />
+                <Experience />
             </div>
 
             <div className="flex items-center justify-center">
@@ -73,7 +74,7 @@ export const HomeComponent = () => {
             </div>
 
             <div className="flex items-center justify-center">
-                <TextRevealByWord text="What they say about me and my work delivering" />
+                <TextRevealByWord text="I take great pride in the feedback I receive from clients and collaborators, as it reflects my commitment to excellence and my dedication to producing meaningful, impactful results." />
             </div>
 
             <div className="flex items-center h-[200vh] justify-center max-w-4xl mx-auto">

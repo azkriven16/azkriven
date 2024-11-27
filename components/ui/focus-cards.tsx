@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export const Card = React.memo(
     ({
@@ -48,6 +49,7 @@ Card.displayName = "Card";
 type Card = {
     title: string;
     src: string;
+    href: string;
 };
 
 export function FocusCards({ cards }: { cards: Card[] }) {
@@ -56,13 +58,14 @@ export function FocusCards({ cards }: { cards: Card[] }) {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto w-full">
             {cards.map((card, index) => (
-                <Card
-                    key={card.title}
-                    card={card}
-                    index={index}
-                    hovered={hovered}
-                    setHovered={setHovered}
-                />
+                <Link href={card.href} key={card.title} target="_blank">
+                    <Card
+                        card={card}
+                        index={index}
+                        hovered={hovered}
+                        setHovered={setHovered}
+                    />
+                </Link>
             ))}
         </div>
     );

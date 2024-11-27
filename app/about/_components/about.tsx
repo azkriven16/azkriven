@@ -6,6 +6,7 @@ import WordPullUp from "@/components/ui/word-pull-up";
 import { ArrowDown } from "lucide-react";
 import { FocusCardsDemo } from "./card-grid";
 import { MarqueeDemo } from "./marquee";
+import { Certificates } from "./certificates";
 
 export const AboutComponent = () => {
     return (
@@ -38,14 +39,14 @@ export const AboutComponent = () => {
                     default_velocity={5}
                     className="font-display text-center text-4xl tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
                 />
-            </div>  
+            </div>
 
             <div className="flex items-center justify-center">
                 <TextRevealByWord text="Over the years, I have acquired several coding certifications that reflect my dedication to continuous learning and professional growth in the field of software development." />
             </div>
 
             <div className="flex items-center justify-center max-w-4xl mx-auto">
-                <FocusCardsDemo />
+                <Certificates />
             </div>
 
             <div className="flex items-center justify-center">

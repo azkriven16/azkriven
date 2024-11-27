@@ -13,8 +13,8 @@ export const Footer = () => {
                             Let&apos;s build fast, scalable, and user-friendly
                             websites together.
                         </p>
-                        <Button className="rounded-full" size="lg">
-                            Contact Me
+                        <Button className="rounded-full" size="lg" asChild>
+                            <Link href="/contact">Contact Me</Link>
                         </Button>
                     </div>
                     <div className="flex  gap-20">
@@ -30,9 +30,20 @@ export const Footer = () => {
                             <span className="text-sm uppercase mb-5 pl-4">
                                 socials
                             </span>
-                            <Navlink href="/" text="Facebook" />
-                            <Navlink href="/" text="Gmail" />
-                            <Navlink href="/" text="Github" />
+                            <Navlink
+                                href="https://www.facebook.com/euger.bonete.9"
+                                text="Facebook"
+                            />
+                            <Navlink
+                                href="https://www.linkedin.com/in/euger-bonete/"
+                                text="LinkedIn"
+                            />
+
+                            <Navlink
+                                href="https://github.com/azkriven16"
+                                text="Github"
+                            />
+                            <Navlink href="mailto:azkriven16" text="Email" />
                         </div>
                     </div>
                 </div>
@@ -48,6 +59,7 @@ export const Footer = () => {
 function Navlink({ href, text }: { href: string; text: string }) {
     return (
         <Link
+            target="_blank"
             href={href}
             className={cn(
                 buttonVariants({ variant: "ghost" }),
