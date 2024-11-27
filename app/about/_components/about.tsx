@@ -38,7 +38,7 @@ export const AboutComponent = () => {
                     default_velocity={5}
                     className="font-display text-center text-4xl tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
                 />
-            </div>
+            </div>  
 
             <div className="flex items-center justify-center">
                 <TextRevealByWord text="Over the years, I have acquired several coding certifications that reflect my dedication to continuous learning and professional growth in the field of software development." />
