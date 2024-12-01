@@ -1,0 +1,17 @@
+const CHUNK_PUBLIC_PATH = "server/app/page.js";
+const runtime = require("../chunks/ssr/[turbopack]_runtime.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_next_dist_101e1c._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__adba9d._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__93d585._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__27d88a._.css");
+runtime.loadChunk("server/chunks/ssr/node_modules_2b8ab5._.js");
+runtime.loadChunk("server/chunks/ssr/src_700248._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__798886._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_micromark-core-commonmark_dev_lib_db118e._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_next_6c066d._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_@react-email_tailwind_dist_index_mjs_770f4c._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_zod_lib_index_mjs_8e7072._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_ef21b7._.js");
+runtime.loadChunk("server/chunks/ssr/74696_@react-email_render_dist_node_index_mjs_7492a2._.js");
+runtime.getOrInstantiateRuntimeModule("[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)", CHUNK_PUBLIC_PATH);
+module.exports = runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/page { MODULE_0 => \"[project]/src/app/layout.tsx [app-rsc] (ecmascript, Next.js server component)\", MODULE_1 => \"[project]/src/app/not-found.tsx [app-rsc] (ecmascript, Next.js server component)\", MODULE_2 => \"[project]/src/app/page.tsx [app-rsc] (ecmascript, Next.js server component)\" } [app-rsc] (ecmascript)", CHUNK_PUBLIC_PATH).exports;
