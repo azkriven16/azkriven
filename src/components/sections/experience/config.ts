@@ -2,32 +2,18 @@ import { Experience } from '@/types/experience';
 
 const experiences: Experience[] = [
   {
-    name: 'Web Development',
-    duration: '2022 - Present',
-    company: 'Acme Inc',
+    name: 'Frontend Engineer Part Time',
+    duration: '2024 - Present',
+    company: 'Rocketshyft',
     description:
-      'Building beautiful and functional websites using modern web technologies, focusing on performance, accessibility, and SEO-friendly design.'
+      'Developed and maintained responsive React applications using Vite for faster development and build times. Implemented reusable UI components using the Material-UI (MUI) design system. Containerized frontend applications using Docker for consistent development and deployment environments.'
   },
   {
-    name: 'UI/UX Design',
+    name: 'Frontend Engineer Intern',
     duration: '2021 - 2022',
-    company: 'Creative Designs Ltd',
+    company: 'Digipay PH',
     description:
-      'Creating delightful and intuitive user experiences, specializing in responsive design and user-centric methodologies.'
-  },
-  {
-    name: 'Database Management',
-    duration: '2020 - 2022',
-    company: 'DataTech Solutions',
-    description:
-      'Storing and organizing data efficiently, ensuring data integrity, and optimizing database queries for high traffic applications.'
-  },
-  {
-    name: 'Mobile Development',
-    duration: '2019 - 2021',
-    company: 'Innovative Apps Inc',
-    description:
-      'Crafting engaging and scalable apps for smartphones and tablets, focusing on cross-platform development and native performance.'
+      'Developed and maintained responsive web interfaces using React and modern frontend technologies. Collaborated with designers and backend teams to implement UI features based on Jira tickets. Participated in agile ceremonies and utilized project management tools for task tracking.'
   }
 ];
 

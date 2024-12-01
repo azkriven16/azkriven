@@ -1102,28 +1102,16 @@ __turbopack_esm__({
 });
 const experiences = [
     {
-        name: 'Web Development',
-        duration: '2022 - Present',
-        company: 'Acme Inc',
-        description: 'Building beautiful and functional websites using modern web technologies, focusing on performance, accessibility, and SEO-friendly design.'
+        name: 'Frontend Engineer Part Time',
+        duration: '2024 - Present',
+        company: 'Rocketshyft',
+        description: 'Developed and maintained responsive React applications using Vite for faster development and build times. Implemented reusable UI components using the Material-UI (MUI) design system. Containerized frontend applications using Docker for consistent development and deployment environments.'
     },
     {
-        name: 'UI/UX Design',
+        name: 'Frontend Engineer Intern',
         duration: '2021 - 2022',
-        company: 'Creative Designs Ltd',
-        description: 'Creating delightful and intuitive user experiences, specializing in responsive design and user-centric methodologies.'
-    },
-    {
-        name: 'Database Management',
-        duration: '2020 - 2022',
-        company: 'DataTech Solutions',
-        description: 'Storing and organizing data efficiently, ensuring data integrity, and optimizing database queries for high traffic applications.'
-    },
-    {
-        name: 'Mobile Development',
-        duration: '2019 - 2021',
-        company: 'Innovative Apps Inc',
-        description: 'Crafting engaging and scalable apps for smartphones and tablets, focusing on cross-platform development and native performance.'
+        company: 'Digipay PH',
+        description: 'Developed and maintained responsive web interfaces using React and modern frontend technologies. Collaborated with designers and backend teams to implement UI features based on Jira tickets. Participated in agile ceremonies and utilized project management tools for task tracking.'
     }
 ];
 ;
@@ -2689,7 +2677,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$section
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$skills$2f$cozy$2f$skills$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Skills$3e$__ = __turbopack_import__("[project]/src/components/sections/skills/cozy/skills.tsx [app-rsc] (ecmascript) <export default as Skills>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$projects$2f$modern$2f$projects$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Projects$3e$__ = __turbopack_import__("[project]/src/components/sections/projects/modern/projects.tsx [app-rsc] (ecmascript) <export default as Projects>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$experience$2f$cozy$2f$experience$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Experience$3e$__ = __turbopack_import__("[project]/src/components/sections/experience/cozy/experience.tsx [app-rsc] (ecmascript) <export default as Experience>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$testimonials$2f$modern$2f$testimonials$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Testimonials$3e$__ = __turbopack_import__("[project]/src/components/sections/testimonials/modern/testimonials.tsx [app-rsc] (ecmascript) <export default as Testimonials>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$contact$2f$cozy$2f$contact$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Contact$3e$__ = __turbopack_import__("[project]/src/components/sections/contact/cozy/contact.tsx [app-rsc] (ecmascript) <export default as Contact>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$footer$2f$cozy$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Footer$3e$__ = __turbopack_import__("[project]/src/components/sections/footer/cozy/footer.tsx [app-rsc] (ecmascript) <export default as Footer>");
 ;
@@ -2735,11 +2722,6 @@ function Home() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$experience$2f$cozy$2f$experience$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Experience$3e$__["Experience"], {}, void 0, false, {
                                 fileName: "[project]/src/app/page.tsx",
                                 lineNumber: 26,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$testimonials$2f$modern$2f$testimonials$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Testimonials$3e$__["Testimonials"], {}, void 0, false, {
-                                fileName: "[project]/src/app/page.tsx",
-                                lineNumber: 27,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$contact$2f$cozy$2f$contact$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Contact$3e$__["Contact"], {}, void 0, false, {
