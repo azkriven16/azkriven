@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/components/sections/header/cozy/nav/image/style.module.scss.module.css"],"sourcesContent":[".imageContainer{display:none}@media only screen and (min-width: 1000px){.imageContainer{display:block;width:500px;height:450px;position:relative}.imageContainer img{object-fit:cover}}"],"names":[],"mappings":"AAAA;;;;AAA6B;EAA2C;;;;;;;EAAyE"}},
-    {"offset": {"line": 17, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
