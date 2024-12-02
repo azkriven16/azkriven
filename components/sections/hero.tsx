@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Balancer from "react-wrap-balancer";
 import FluidCursor from "../ui/fluid-cursor";
 import { Button } from "../ui/button";
+import { RainbowButton } from "../ui/rainbow-button";
 
 export const HeroSection = () => {
     return (
@@ -60,9 +61,10 @@ export const HeroSection = () => {
                         </Balancer>
                     </motion.p>
                 </div>
-                <Button className="rounded-full h-20 text-lg md:text-xl p-5 md:p-10 mt-10">
+
+                <RainbowButton className="rounded-full h-20 text-lg md:text-xl p-5 md:p-10 mt-10">
                     🤔 Have a project? Lets talk
-                </Button>
+                </RainbowButton>
             </motion.div>
         </div>
     );
