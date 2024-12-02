@@ -49,13 +49,13 @@ export const HeroSection = () => {
                             delay: 0.2,
                             ease: "easeOut",
                         }}
-                        className="text-base md:text-lg tracking-wide text-muted-foreground mx-auto"
+                        className="text-base md:text-lg md:tracking-wide text-muted-foreground mx-auto"
                     >
                         <Balancer>
-                            I've worked with 2 companies, I've gained 1+ year of
-                            experience working with React, Next.js, and
-                            TypeScript. I'm currently a student, graduating in
-                            2025, while working a part-time dev job.
+                            Worked with 2 companies, 1+ year of experience
+                            working with React, Next.js, and TypeScript.
+                            Currently a student, graduating in 2025, while
+                            working a part-time dev.
                         </Balancer>
                     </motion.p>
                 </div>
