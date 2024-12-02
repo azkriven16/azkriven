@@ -8,13 +8,13 @@ export default function Logos() {
     return (
         <div className="mx-auto flex max-w-container flex-col items-center gap-8 text-center">
             <h2 className="text-md font-semibold">
-                This portfolio is built with the best tools
+                This portfolio is built with
             </h2>
             <div className="flex flex-wrap items-center justify-center gap-8">
-                <Logo image={React} name="React" version="18.3.1" />
-                <Logo image={TypeScript} name="TypeScript" version="5.6.2" />
-                <Logo image={ShadcnUi} name="Shadcn/ui" version="2.0.7" />
-                <Logo image={Tailwind} name="Tailwind" version="3.4.11" />
+                <Logo image={React} name="React" />
+                <Logo image={TypeScript} name="TypeScript" />
+                <Logo image={ShadcnUi} name="Shadcn/ui" />
+                <Logo image={Tailwind} name="Tailwind" />
             </div>
         </div>
     );

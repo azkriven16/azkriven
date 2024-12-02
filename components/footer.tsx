@@ -11,23 +11,25 @@ import { Sigma } from "lucide-react";
 
 export default function FooterComponent() {
     return (
-        <footer className="w-full bg-background px-4">
+        <footer className="max-w-4xl mx-auto w-full bg-background px-4">
+            <div className="flex items-center justify-center gap-2 opacity-50 text-muted-foreground bg-gradient-to-b from-background to-transparent">
+                <Link
+                    href="/"
+                    className="font-semibold flex items-center text-4xl md:text-9xl max-w-4xl"
+                >
+                    <Button
+                        size="icon"
+                        className="h-20 md:h-52 w-20 md:w-52 bg-muted-foreground"
+                    >
+                        <Sigma className="h-20 md:h-40 w-20 md:w-40" />
+                    </Button>
+                    ugerBonete
+                </Link>
+            </div>
+
             <div className="mx-auto max-w-container">
                 <Footer>
                     <FooterContent>
-                        <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
-                            <div className="flex items-center gap-2">
-                                <Link
-                                    href="/"
-                                    className="font-semibold flex items-center"
-                                >
-                                    <Button size="icon" className="h-8 w-8">
-                                        <Sigma />
-                                    </Button>
-                                    ugerBonete
-                                </Link>
-                            </div>
-                        </FooterColumn>
                         <FooterColumn>
                             <h3 className="text-md pt-1 font-semibold">
                                 Product

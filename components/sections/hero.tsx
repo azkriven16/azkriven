@@ -5,6 +5,7 @@ import Balancer from "react-wrap-balancer";
 import FluidCursor from "../ui/fluid-cursor";
 import { Button } from "../ui/button";
 import { RainbowButton } from "../ui/rainbow-button";
+import WordRotate from "../ui/word-rotate";
 
 export const HeroSection = () => {
     return (
@@ -37,7 +38,19 @@ export const HeroSection = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="text-3xl md:text-[3.5rem] font-black leading-relaxed md:leading-tight"
                     >
-                        <Balancer>{`Crafting 🔨 websites 🌐 with precision 📐, one <div> at a time ⌚.`}</Balancer>
+                        <Balancer>
+                            <WordRotate
+                                words={[
+                                    "Crafting 🔨 websites 🌐 with precision 📐, one <div> at a time ⌚.",
+                                    "Designing 💻 elegant and functional user interfaces 🎨.",
+                                    "Developing 🚀 scalable solutions to complex problems 🤔.",
+                                    "Transforming ideas 💡 into reality 🛠️ with code.",
+                                    "Building responsive and modern applications 📱 for all devices.",
+                                    "Optimizing ⚙️ for performance and user experience 🌟.",
+                                    "Engineering the future 🔮 of web technologies.",
+                                ]}
+                            />
+                        </Balancer>
                     </motion.h1>
                 </div>
 
@@ -62,9 +75,19 @@ export const HeroSection = () => {
                     </motion.p>
                 </div>
 
-                <RainbowButton className="rounded-full h-14 md:h-20 text-lg md:text-xl p-5 md:p-10 mt-10">
-                    🤔 Have a project? Lets talk
-                </RainbowButton>
+                <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.2,
+                        ease: "easeOut",
+                    }}
+                >
+                    <RainbowButton className="rounded-full h-14 md:h-20 text-lg md:text-xl p-5 md:p-10 mt-10">
+                        🤔 Have a project? Lets talk
+                    </RainbowButton>
+                </motion.div>
             </motion.div>
         </div>
     );
