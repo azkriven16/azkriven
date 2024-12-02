@@ -60,7 +60,7 @@ export const HeroSection = () => {
                         </Balancer>
                     </motion.p>
                 </div>
-                <Button className="rounded-full h-20 text-xl p-10 mt-10">
+                <Button className="rounded-full h-20 text-lg md:text-xl p-5 md:p-10 mt-10">
                     🤔 Have a project? Lets talk
                 </Button>
             </motion.div>
