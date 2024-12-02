@@ -4,14 +4,9 @@ import Link from "next/link";
 
 export const Footer = () => {
     return (
-        <footer className="max-w-5xl mx-auto p-5 flex flex-col gap-5 items-start justify-between border-t border-primary">
-            <p className="text-muted-foreground">@ 2024 Euger Bonete Jr.</p>
-            <p className="text-3xl">Get in touch</p>
-            <div className="flex gap-2">
-                <FooterLink href="" text="Facebook" />
-                <FooterLink href="" text="Github" />
-                <FooterLink href="" text="LinkedIn" />
-            </div>
+        <footer className="max-w-4xl mx-auto p-5 flex flex-col md:flex-row gap-5 items-start justify-between">
+            <p className="tracking-wide">Built with 🔥 by Euger</p>
+            <p className="tracking-wide">© 2024 All rights reserved.</p>
         </footer>
     );
 };
