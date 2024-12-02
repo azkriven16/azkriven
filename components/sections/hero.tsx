@@ -35,9 +35,9 @@ export const HeroSection = () => {
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="text-3xl md:text-[3.5rem] font-black leading-tight"
+                        className="text-3xl md:text-[3.5rem] font-black leading-relaxed md:leading-tight"
                     >
-                        <Balancer>{`Crafting 🔨 websites 🌐 with precision 📐 , one <div> at a time ⌚`}</Balancer>
+                        <Balancer>{`Crafting 🔨 websites 🌐 with precision 📐, one <div> at a time ⌚.`}</Balancer>
                     </motion.h1>
                 </div>
 
