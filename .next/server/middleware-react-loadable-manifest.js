@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"components\\\\ui\\\\chatbot.tsx -> react-timeago\":{\"id\":\"components\\\\ui\\\\chatbot.tsx -> react-timeago\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_react-timeago_es6_index_js.js\"]}}"

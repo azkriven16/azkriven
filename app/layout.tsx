@@ -1,9 +1,11 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import ScrollProgressBar from "@/components/ui/scroll-progress-bar";
+import { Toaster } from "@/components/ui/sonner";
+import ChatBot from "@/components/ui/chatbot";
 import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -39,7 +41,9 @@ export default function RootLayout({
                 >
                     <Navbar />
                     {children}
-                    <Footer />
+                    <ScrollProgressBar type="bar" />
+                    <Toaster />
+                    <ChatBot />
                 </ThemeProvider>
             </body>
         </html>
