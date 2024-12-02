@@ -1,20 +1,107 @@
-import React from "react";
-import { Button } from "./ui/button";
+import ModeToggle from "@/components/ui/mode-toggle";
+import {
+    Footer,
+    FooterColumn,
+    FooterBottom,
+    FooterContent,
+} from "@/components/ui/footer";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { Sigma } from "lucide-react";
 
-export const Footer = () => {
+export default function FooterComponent() {
     return (
-        <footer className="max-w-4xl mx-auto p-5 flex flex-col md:flex-row gap-5 items-start justify-between">
-            <p className="tracking-wide">Built with 🔥 by Euger</p>
-            <p className="tracking-wide">© 2024 All rights reserved.</p>
+        <footer className="w-full bg-background px-4">
+            <div className="mx-auto max-w-container">
+                <Footer>
+                    <FooterContent>
+                        <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
+                            <div className="flex items-center gap-2">
+                                <Link
+                                    href="/"
+                                    className="font-semibold flex items-center"
+                                >
+                                    <Button size="icon" className="h-8 w-8">
+                                        <Sigma />
+                                    </Button>
+                                    ugerBonete
+                                </Link>
+                            </div>
+                        </FooterColumn>
+                        <FooterColumn>
+                            <h3 className="text-md pt-1 font-semibold">
+                                Product
+                            </h3>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                Changelog
+                            </a>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                Documentation
+                            </a>
+                        </FooterColumn>
+                        <FooterColumn>
+                            <h3 className="text-md pt-1 font-semibold">
+                                Company
+                            </h3>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                About
+                            </a>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                Careers
+                            </a>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                Blog
+                            </a>
+                        </FooterColumn>
+                        <FooterColumn>
+                            <h3 className="text-md pt-1 font-semibold">
+                                Contact
+                            </h3>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                Discord
+                            </a>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                Twitter
+                            </a>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                Github
+                            </a>
+                        </FooterColumn>
+                    </FooterContent>
+                    <FooterBottom>
+                        <div>© 2024 Euger Bonete Jr. All rights reserved</div>
+                        <div className="flex items-center gap-4">
+                            <a href="/">Privacy Policy</a>
+                            <a href="/">Terms of Service</a>
+                            <ModeToggle />
+                        </div>
+                    </FooterBottom>
+                </Footer>
+            </div>
         </footer>
-    );
-};
-
-function FooterLink({ href, text }: { href: string; text: string }) {
-    return (
-        <Button asChild variant="link" className="p-0 text-base">
-            <Link href={href}>{text}</Link>
-        </Button>
     );
 }

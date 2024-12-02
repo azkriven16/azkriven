@@ -62,7 +62,7 @@ export const HeroSection = () => {
                     </motion.p>
                 </div>
 
-                <RainbowButton className="rounded-full h-20 text-lg md:text-xl p-5 md:p-10 mt-10">
+                <RainbowButton className="rounded-full h-14 md:h-20 text-lg md:text-xl p-5 md:p-10 mt-10">
                     🤔 Have a project? Lets talk
                 </RainbowButton>
             </motion.div>
