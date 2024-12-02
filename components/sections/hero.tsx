@@ -3,13 +3,14 @@
 import { motion } from "framer-motion";
 import Balancer from "react-wrap-balancer";
 import FluidCursor from "../ui/fluid-cursor";
+import { Button } from "../ui/button";
 
 export const HeroSection = () => {
     return (
-        <div className="relative h-[80vh] md:h-screen w-full overflow-hidden md:pt-20">
-            <FluidCursor />
+        <div className="relative h-screen w-full overflow-hidden md:pt-20">
+            {/* <FluidCursor /> */}
             {/* Hero Content */}
-            <motion.div className="relative z-10 flex flex-col gap-5 justify-center items-center h-full text-center px-4">
+            <motion.div className="relative z-10 flex flex-col gap-5 md:gap-7 justify-center items-center h-full text-center px-4">
                 {/* Subtitle */}
                 <div className="overflow-hidden">
                     <motion.p
@@ -35,7 +36,7 @@ export const HeroSection = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="text-3xl md:text-[3.5rem] font-black leading-tight"
                     >
-                        <Balancer>{`Crafting websites with precision, one <div> at a time`}</Balancer>
+                        <Balancer>{`Crafting 🔨 websites 🌐 with precision 📐 , one <div> at a time ⌚`}</Balancer>
                     </motion.h1>
                 </div>
 
@@ -59,6 +60,9 @@ export const HeroSection = () => {
                         </Balancer>
                     </motion.p>
                 </div>
+                <Button className="rounded-full h-20 text-xl p-10 mt-10">
+                    🤔 Have a project? Lets talk
+                </Button>
             </motion.div>
         </div>
     );

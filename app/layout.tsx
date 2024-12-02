@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import ChatBot from "@/components/ui/chatbot";
 import { Navbar } from "@/components/navbar";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { Footer } from "@/components/footer";
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
     variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({
                 >
                     <Navbar />
                     {children}
+                    <Footer />
                     <ScrollProgressBar type="bar" />
                     <Toaster />
                     <ChatBot />
