@@ -8,7 +8,7 @@ import { Button } from "../ui/button";
 export const HeroSection = () => {
     return (
         <div className="relative h-screen w-full overflow-hidden md:pt-20">
-            {/* <FluidCursor /> */}
+            <FluidCursor />
             {/* Hero Content */}
             <motion.div className="relative z-10 flex flex-col gap-5 md:gap-7 justify-center items-center h-full text-center px-4">
                 {/* Subtitle */}
