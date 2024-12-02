@@ -37,7 +37,7 @@ export default function ScrollProgressBar({
     if (type === "bar") {
         return (
             <div
-                className="fixed start-0 end-0 top-0 pointer-events-none"
+                className="fixed start-0 end-0 top-0 pointer-events-none z-50"
                 style={{ height: `${strokeSize + 2}px` }}
             >
                 <span
