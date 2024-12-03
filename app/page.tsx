@@ -1,3 +1,4 @@
+import { Contact } from "@/components/sections/contact";
 import { HeroSection } from "@/components/sections/hero";
 import { IntroHero } from "@/components/sections/intro";
 import Logos from "@/components/sections/logos";
@@ -18,6 +19,7 @@ export default function Home() {
                 {/* <Quotes /> */}
             </main>
             <TimelineDemo />
+            <Contact />
         </SmoothScroll>
     );
 }
