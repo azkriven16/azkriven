@@ -8,11 +8,12 @@ import {
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Sigma } from "lucide-react";
+import Logos from "./sections/logos";
 
 export default function FooterComponent() {
     return (
         <footer className="max-w-4xl mx-auto w-full bg-background p-4">
-            <div className="flex items-center justify-center gap-2 opacity-50 text-muted-foreground bg-gradient-to-b from-background to-transparent">
+            <div className="flex items-center justify-center gap-2 opacity-50 text-muted-foreground bg-gradient-to-b from-background to-transparent mb-20">
                 <Link
                     href="/"
                     className="font-semibold flex items-center text-5xl md:text-9xl max-w-4xl px-4"
@@ -27,7 +28,9 @@ export default function FooterComponent() {
                 </Link>
             </div>
 
-            <div className="mx-auto max-w-container mt-20">
+            <Logos />
+
+            <div className="mx-auto max-w-container">
                 <Footer>
                     <FooterContent>
                         <FooterColumn>

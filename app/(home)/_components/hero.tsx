@@ -2,6 +2,12 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
 import WordRotate from "@/components/ui/word-rotate";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -27,13 +33,20 @@ export const Hero = () => {
                             Hey! I'm Euger, a software developer.
                         </Balancer>
                     </motion.p>
-                    <Avatar className="h-20 w-20">
-                        <AvatarImage
-                            src="https://github.com/htxmlx.png"
-                            alt="@azkriven16"
-                        />
-                        <AvatarFallback>EB</AvatarFallback>
-                    </Avatar>
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger>
+                                <Avatar className="h-20 w-20">
+                                    <AvatarImage
+                                        src="https://github.com/htxmlx.png"
+                                        alt="@azkriven16"
+                                    />
+                                    <AvatarFallback>EB</AvatarFallback>
+                                </Avatar>
+                            </TooltipTrigger>
+                            <TooltipContent>Hello there! 👋</TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
                 </div>
                 {/* Name and Title */}
                 <div className="overflow-hidden max-w-5xl">
