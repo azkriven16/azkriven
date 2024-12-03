@@ -8,6 +8,8 @@ import ChatBot from "@/components/ui/chatbot";
 import { Navbar } from "@/components/navbar";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Footer from "@/components/footer";
+import AnimatedCursor from "react-animated-cursor";
+
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
     variable: "--font-geist-sans",
@@ -48,6 +50,20 @@ export default function RootLayout({
                     <ScrollProgressBar type="bar" />
                     <Toaster />
                     <ChatBot />
+                    <AnimatedCursor
+                        innerSize={8}
+                        outerSize={35}
+                        innerScale={1}
+                        outerScale={2}
+                        outerAlpha={0}
+                        innerStyle={{
+                            backgroundColor: "var(--cursor-color)",
+                        }}
+                        outerStyle={{
+                            border: "3px solid var(--cursor-color)",
+                        }}
+                        showSystemCursor
+                    />
                 </ThemeProvider>
             </body>
         </html>

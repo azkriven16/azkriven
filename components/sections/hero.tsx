@@ -6,15 +6,16 @@ import FluidCursor from "../ui/fluid-cursor";
 import { Button } from "../ui/button";
 import { RainbowButton } from "../ui/rainbow-button";
 import WordRotate from "../ui/word-rotate";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 export const HeroSection = () => {
     return (
         <div className="relative h-screen w-full overflow-hidden md:pt-20">
-            <FluidCursor />
+            {/* <FluidCursor /> */}
             {/* Hero Content */}
-            <motion.div className="relative z-10 flex flex-col gap-5 md:gap-7 justify-center items-center h-full text-center px-4">
+            <motion.div className="relative z-10 flex flex-col gap-5 justify-center items-center h-full text-center px-4">
                 {/* Subtitle */}
-                <div className="overflow-hidden">
+                <div className="overflow-hidden flex flex-col-reverse items-center gap-5">
                     <motion.p
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -29,6 +30,13 @@ export const HeroSection = () => {
                             Hey! I'm Euger, a software developer.
                         </Balancer>
                     </motion.p>
+                    <Avatar className="h-20 w-20">
+                        <AvatarImage
+                            src="https://github.com/htxmlx.png"
+                            alt="@shadcn"
+                        />
+                        <AvatarFallback>CN</AvatarFallback>
+                    </Avatar>
                 </div>
                 {/* Name and Title */}
                 <div className="overflow-hidden">
