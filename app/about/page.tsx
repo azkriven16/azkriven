@@ -2,16 +2,15 @@ import { Contact } from "@/components/sections/contact";
 import { Projects } from "@/components/sections/projects";
 import SmoothScroll from "@/components/smooth-scroll";
 import { Hero } from "./_components/hero";
-import Logos from "./_components/logos";
-import { TechStack } from "./_components/techstack";
+import { Experience } from "../../components/sections/experience";
+import { TechStack } from "../../components/sections/techstack";
 
-export default function Work() {
+export default function About() {
     return (
         <SmoothScroll>
             <main className="space-y-20 py-10">
                 <Hero />
-                <Logos />
-                <Projects />
+                <Experience />
                 <TechStack />
                 <Contact />
             </main>

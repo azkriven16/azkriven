@@ -37,7 +37,7 @@ export const Navbar = () => {
 
     const navLinks = [
         { href: "/", text: "Home" },
-        { href: "/work", text: "Work" },
+        { href: "/about", text: "About" },
     ];
 
     return (

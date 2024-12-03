@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Logos() {
+export function Experience() {
     return (
         <div className="mx-auto flex max-w-container flex-col items-center gap-4 text-center">
             <h2 className="text-md font-semibold">Companies I worked with</h2>

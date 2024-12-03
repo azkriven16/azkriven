@@ -3,15 +3,19 @@ import { Projects } from "@/components/sections/projects";
 import SmoothScroll from "@/components/smooth-scroll";
 import { Hero } from "./_components/hero";
 import Logos from "./_components/logos";
+import { Experience } from "@/components/sections/experience";
+import { TechStack } from "@/components/sections/techstack";
 
 export default function Home() {
     return (
         <SmoothScroll>
             <main className="space-y-20 py-10">
                 <Hero />
-                <Logos />
+                <Experience />
+                <TechStack />
                 <Projects />
                 <Contact />
+                <Logos />
             </main>
         </SmoothScroll>
     );

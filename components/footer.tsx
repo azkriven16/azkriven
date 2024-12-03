@@ -32,25 +32,31 @@ export default function FooterComponent() {
                     <FooterContent>
                         <FooterColumn>
                             <h3 className="text-md pt-1 font-semibold">
-                                Product
+                                Download
                             </h3>
                             <a
                                 href="/"
                                 className="text-sm text-muted-foreground"
                             >
-                                Changelog
+                                Resume
                             </a>
                             <a
                                 href="/"
                                 className="text-sm text-muted-foreground"
                             >
-                                Documentation
+                                CV
                             </a>
                         </FooterColumn>
                         <FooterColumn>
                             <h3 className="text-md pt-1 font-semibold">
-                                Company
+                                Navigation
                             </h3>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                Home
+                            </a>
                             <a
                                 href="/"
                                 className="text-sm text-muted-foreground"
@@ -61,36 +67,36 @@ export default function FooterComponent() {
                                 href="/"
                                 className="text-sm text-muted-foreground"
                             >
-                                Careers
-                            </a>
-                            <a
-                                href="/"
-                                className="text-sm text-muted-foreground"
-                            >
-                                Blog
+                                Contact
                             </a>
                         </FooterColumn>
                         <FooterColumn>
                             <h3 className="text-md pt-1 font-semibold">
-                                Contact
+                                Socials
                             </h3>
                             <a
                                 href="/"
                                 className="text-sm text-muted-foreground"
                             >
-                                Discord
-                            </a>
-                            <a
-                                href="/"
-                                className="text-sm text-muted-foreground"
-                            >
-                                Twitter
-                            </a>
-                            <a
-                                href="/"
-                                className="text-sm text-muted-foreground"
-                            >
                                 Github
+                            </a>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                Facebook
+                            </a>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                LinkedIn
+                            </a>
+                            <a
+                                href="/"
+                                className="text-sm text-muted-foreground"
+                            >
+                                Email
                             </a>
                         </FooterColumn>
                     </FooterContent>
