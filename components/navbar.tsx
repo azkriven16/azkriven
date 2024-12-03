@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import ModeToggle from "./ui/mode-toggle";
 import { usePathname } from "next/navigation";
+import { RainbowButton } from "./ui/rainbow-button";
 
 export const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,7 +38,6 @@ export const Navbar = () => {
     const navLinks = [
         { href: "/", text: "Home" },
         { href: "/work", text: "Work" },
-        { href: "/about", text: "About" },
     ];
 
     return (
@@ -74,9 +74,11 @@ export const Navbar = () => {
 
                 <div className="flex items-center gap-5">
                     <ModeToggle />
-                    <Button className="rounded-full text-sm font-semibold">
-                        Lets Connect <ChevronRight />
-                    </Button>
+                    <RainbowButton className="rounded-full text-sm font-semibold">
+                        <Link href="/contact" className="flex items-center">
+                            Lets Connect <ChevronRight />
+                        </Link>
+                    </RainbowButton>
                 </div>
             </motion.div>
 
@@ -98,7 +100,7 @@ export const Navbar = () => {
                     <ModeToggle />
                     <Button
                         size="icon"
-                        variant="outline"
+                        variant="ghost"
                         onClick={toggleMobileMenu}
                     >
                         {isMobileMenuOpen ? <X /> : <Menu />}
@@ -173,14 +175,18 @@ export const Navbar = () => {
                             }}
                             className="absolute bottom-12"
                         >
-                            <Button
-                                size="lg"
+                            <RainbowButton
                                 className="rounded-full text-lg font-semibold"
                                 onClick={toggleMobileMenu}
                             >
-                                Lets Connect{" "}
-                                <ChevronRight className="ml-2 h-5 w-5" />
-                            </Button>
+                                <Link
+                                    href="/contact"
+                                    className="flex items-center"
+                                >
+                                    Lets Connect
+                                    <ChevronRight className="ml-2 h-5 w-5" />
+                                </Link>
+                            </RainbowButton>
                         </motion.div>
                     </motion.div>
                 )}
