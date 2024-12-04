@@ -23,16 +23,14 @@ export default function Loader() {
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4, duration: 0.5 }}
                     className="text-muted-foreground mb-6"
                 >
-                    🚀 Loading the site... Hang tight! 🎉
+                    🚀 Loading the content... Hang tight! 🎉
                 </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 0.5 }}
                     className="w-full h-2 bg-secondary rounded-full overflow-hidden"
                 >
                     <motion.div

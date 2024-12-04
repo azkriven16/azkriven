@@ -4,17 +4,20 @@ import SmoothScroll from "@/components/smooth-scroll";
 import { Hero } from "./_components/hero";
 import { Experience } from "@/components/sections/experience";
 import { TechStack } from "@/components/sections/techstack";
+import { Preloader } from "@/components/preloader";
 
-export default function Home() {
+export default async function Home() {
     return (
-        <SmoothScroll>
-            <main className="space-y-20 py-10">
-                <Hero />
-                <Experience />
-                <TechStack />
-                <Projects />
-                <Contact />
-            </main>
-        </SmoothScroll>
+        <Preloader>
+            <SmoothScroll>
+                <main className="space-y-20 py-10">
+                    <Hero />
+                    <Experience />
+                    <TechStack />
+                    <Projects />
+                    <Contact />
+                </main>
+            </SmoothScroll>
+        </Preloader>
     );
 }

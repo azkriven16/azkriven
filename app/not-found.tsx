@@ -20,11 +20,11 @@ export default function NotFound() {
                     transition={{ delay: 0.2, duration: 0.5 }}
                 >
                     <Image
-                        src="/not-found.png"
+                        src="/not-found.gif"
                         alt="404 Not Found"
-                        width={300}
-                        height={300}
-                        className="mx-auto mb-6 select-none rounded-full"
+                        width={250}
+                        height={250}
+                        className="mx-auto mb-6 select-none"
                         draggable={false}
                     />
                 </motion.div>

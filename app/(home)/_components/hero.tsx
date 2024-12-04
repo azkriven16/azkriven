@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/tooltip";
 import WordRotate from "@/components/ui/word-rotate";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
@@ -18,7 +19,7 @@ export const Hero = () => {
         <div className="relative h-screen w-full overflow-hidden md:pt-20">
             <motion.div className="relative z-10 flex flex-col gap-5 justify-center items-center h-full text-center px-4">
                 {/* Subtitle */}
-                <div className="overflow-hidden flex flex-col-reverse items-center gap-5">
+                <div className="overflow-hidden flex flex-col-reverse items-center gap-2">
                     <motion.p
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -36,20 +37,28 @@ export const Hero = () => {
                     <TooltipProvider>
                         <Tooltip>
                             <TooltipTrigger>
-                                <Avatar className="h-20 w-20">
-                                    <AvatarImage
-                                        src="https://github.com/htxmlx.png"
-                                        alt="@azkriven16"
+                                <motion.div
+                                    initial={{ y: -50, opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    transition={{ delay: 0.2, duration: 0.5 }}
+                                    className="mr-12"
+                                >
+                                    <Image
+                                        src="/hello.gif"
+                                        alt="404 Not Found"
+                                        width={150}
+                                        height={150}
+                                        className="mx-auto mb-6 select-none"
+                                        draggable={false}
                                     />
-                                    <AvatarFallback>EB</AvatarFallback>
-                                </Avatar>
+                                </motion.div>
                             </TooltipTrigger>
                             <TooltipContent>Hello there! 👋</TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
                 </div>
                 {/* Name and Title */}
-                <div className="overflow-hidden max-w-5xl">
+                <div className="max-w-5xl">
                     <motion.h1
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -73,7 +82,7 @@ export const Hero = () => {
                 </div>
 
                 {/* Subtitle */}
-                <div className="overflow-hidden max-w-4xl">
+                <div className="max-w-4xl">
                     <motion.p
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}

@@ -10,9 +10,9 @@ import Balancer from "react-wrap-balancer";
 export const Contact = () => {
     return (
         <div className="relative h-screen w-full overflow-hidden md:pt-20">
-            <motion.div className="relative z-10 flex flex-col gap-5 justify-center items-center h-full text-center px-4">
+            <motion.div className="relative z-10 flex flex-col gap-2 justify-center items-center h-full text-center px-4">
                 {/* Name and Title */}
-                <div className="overflow-hidden max-w-5xl">
+                <div className="max-w-5xl">
                     <motion.h1
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -36,7 +36,7 @@ export const Contact = () => {
                 </div>
 
                 {/* Subtitle */}
-                <div className="overflow-hidden max-w-4xl">
+                <div className="max-w-4xl">
                     <motion.p
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
