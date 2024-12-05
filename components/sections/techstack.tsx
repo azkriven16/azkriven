@@ -61,7 +61,7 @@ export const TechStack = () => {
 
     return (
         <section className="py-16 bg-background overflow-hidden">
-            <h2 className="text-md font-semibold text-center mb-5">
+            <h2 className="text-md font-semibold text-center mb-5 uppercase">
                 Tech and tools i use to build stuff
             </h2>
             <div className="container mx-auto px-4">

@@ -7,7 +7,7 @@ import Logo from "@/components/ui/logo";
 export default function Logos() {
     return (
         <div className="mx-auto flex max-w-container flex-col items-center gap-8 text-center">
-            <h2 className="text-md font-semibold">
+            <h2 className="text-md font-semibold text-center mb-5 uppercase">
                 This portfolio is built with
             </h2>
             <div className="flex flex-wrap items-center justify-center gap-8">

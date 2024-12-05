@@ -5,6 +5,8 @@ import { Hero } from "./_components/hero";
 import { Experience } from "../../components/sections/experience";
 import { TechStack } from "../../components/sections/techstack";
 import { Preloader } from "@/components/preloader";
+import Education from "@/components/sections/education";
+import Certificates from "@/components/sections/certificates";
 
 export default function About() {
     return (
@@ -14,6 +16,8 @@ export default function About() {
                     <Hero />
                     <Experience />
                     <TechStack />
+                    <Certificates />
+                    <Education />
                     <Contact />
                 </main>
             </SmoothScroll>

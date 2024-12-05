@@ -61,13 +61,13 @@ export default function FooterComponent() {
                                 Home
                             </a>
                             <a
-                                href="/"
+                                href="/about"
                                 className="text-sm text-muted-foreground"
                             >
                                 About
                             </a>
                             <a
-                                href="/"
+                                href="/contact"
                                 className="text-sm text-muted-foreground"
                             >
                                 Contact
@@ -78,25 +78,29 @@ export default function FooterComponent() {
                                 Socials
                             </h3>
                             <a
-                                href="/"
+                                href="https://github.com/azkriven16"
+                                target="_blank"
                                 className="text-sm text-muted-foreground"
                             >
                                 Github
                             </a>
                             <a
-                                href="/"
+                                href="https://www.facebook.com/euger.bonete.9"
+                                target="_blank"
                                 className="text-sm text-muted-foreground"
                             >
                                 Facebook
                             </a>
                             <a
-                                href="/"
+                                href="https://www.linkedin.com/in/euger-bonete/"
+                                target="_blank"
                                 className="text-sm text-muted-foreground"
                             >
                                 LinkedIn
                             </a>
                             <a
-                                href="/"
+                                href="mailto:azkriven16"
+                                target="_blank"
                                 className="text-sm text-muted-foreground"
                             >
                                 Email

@@ -38,7 +38,7 @@ export const Navbar = () => {
     const navLinks = [
         { href: "/", text: "Home" },
         { href: "/about", text: "About" },
-        { href: "/something", text: "Resume" },
+        { href: "https://eugerbonete.vercel.app/resume.pdf", text: "Resume" },
     ];
 
     return (

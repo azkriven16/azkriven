@@ -41,17 +41,8 @@ export const Hero = () => {
                                     initial={{ y: -50, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     transition={{ delay: 0.2, duration: 0.5 }}
-                                    className="mr-12"
-                                >
-                                    <Image
-                                        src="/hello.gif"
-                                        alt="404 Not Found"
-                                        width={150}
-                                        height={150}
-                                        className="mx-auto mb-6 select-none"
-                                        draggable={false}
-                                    />
-                                </motion.div>
+                                    className="mr-7 md:mr-12"
+                                ></motion.div>
                             </TooltipTrigger>
                             <TooltipContent>Hello there! 👋</TooltipContent>
                         </Tooltip>
